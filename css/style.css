@@ -1,0 +1,209 @@
+
+    :root {
+      --primary: #0077ff;
+      --primary-dark: #0055cc;
+      --accent: #00ffaa;
+      --dark: #111827;
+      --light: #f8fafc;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      position: relative;
+      min-height: 100vh;
+    }
+    
+    .logo-font {
+      font-family: 'Orbitron', sans-serif;
+    }
+    
+    .neon-glow {
+      text-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary);
+    }
+    
+    .card-glow {
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0, 119, 255, 0.2);
+    }
+    
+    .card-glow:hover {
+      box-shadow: 0 0 15px rgba(0, 119, 255, 0.5);
+      transform: translateY(-5px);
+      border: 1px solid rgba(0, 119, 255, 0.5);
+    }
+    
+    .service-card.selected {
+      border: 2px solid var(--primary);
+      box-shadow: 0 0 20px rgba(0, 119, 255, 0.7);
+    }
+    
+    .bg-tech {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    }
+    
+    .step-indicator {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--dark);
+      border: 2px solid var(--primary);
+      color: var(--light);
+      margin-right: 10px;
+    }
+    
+    .active-step .step-indicator {
+      background: var(--primary);
+    }
+    
+    .step-connector {
+      flex-grow: 1;
+      height: 2px;
+      background-color: #374151;
+    }
+    
+    .active-connector {
+      background-color: var(--primary);
+    }
+    
+    .tech-border {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .tech-border::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+    
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #25D366;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .whatsapp-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+    
+    .wizard-section {
+      display: none;
+    }
+    
+    .wizard-section.active {
+      display: block;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .slide-in-panel {
+      transform: translateX(100%);
+      transition: transform 0.4s ease-in-out;
+    }
+    
+    .slide-in-panel.active {
+      transform: translateX(0);
+    }
+    
+    .loading-spinner {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .price-tag {
+      background-color: rgba(0, 119, 255, 0.2);
+      border: 1px solid rgba(0, 119, 255, 0.5);
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    
+    .quote-summary {
+      border-left: 3px solid var(--primary);
+    }
+    
+    .button-tech {
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .button-tech::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgba(255, 255, 255, 0.1);
+      z-index: -1;
+      transition: height 0.3s ease;
+    }
+    
+    .button-tech:hover::after {
+      height: 100%;
+    }
+    
+    #admin-modal, #admin-prices {
+      background: #111827;             /* dark bg */
+      border: 1px solid rgba(0,119,255,0.4);
+    }
+    
+    .tech-border {
+      border-color: rgba(0,119,255,0.4) !important;
+    }
+    
+    .text-cyan-400 { color: #00ffaa !important; }
+    .bg-gray-800 { background: #1f2937 !important; }
+    .button-tech { background: linear-gradient(135deg, #0077ff, #00ffaa); color: #fff; }
+    
+    #admin-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;          /* ↑ higher than footer */
+      background: rgba(0,0,0,0.6);
+      display: none;          /* hide by default */
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Hide any element marked .admin-visible by default */
+    .admin-visible { display: none !important; }
+    
+    /* Once admin is logged, show those elements */
+    body.admin-logged .admin-visible { display: inline-block !important; }
