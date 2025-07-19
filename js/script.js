@@ -52,8 +52,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Start Quote Button
   document.getElementById("start-quote").addEventListener("click", function () {
+    // Show the service selection step
     document.getElementById("quote-wizard").classList.remove("hidden");
+    // Hide the start button
     document.getElementById("start-quote").classList.add("hidden");
+    // Ensure step 1 is active and visible
+    goToStep(1);
+    // Remove any previous service selection highlight
+    document.querySelectorAll(".service-card").forEach(card => card.classList.remove("selected"));
+    // Hide all options panels
+    document.querySelectorAll(".options-panel").forEach(panel => panel.classList.add("hidden"));
   });
 
   // Service Selection Logic
@@ -113,10 +121,8 @@ document.addEventListener("DOMContentLoaded", function () {
       // Store in localStorage
       localStorage.setItem("davetech_quote", JSON.stringify(quoteData));
 
-      // Go to next step
+      // Avanzar directamente al paso 2
       goToStep(2);
-
-      // Show the correct options panel
       document.querySelectorAll(".options-panel").forEach((panel) => {
         panel.classList.add("hidden");
       });
@@ -127,7 +133,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Back buttons
+  // Eliminar el botón continuar y su evento
+
+// Back buttons
   document
     .getElementById("back-to-step1")
     .addEventListener("click", function () {
