@@ -193,3 +193,53 @@
 </body>
 </html>
 
+<script>
+  // --- Modal de Planes Web ---
+  const plans = {
+    basic: {
+      title: "Plan Básico",
+      description: "Sitio web sencillo con diseño responsivo y hasta 5 páginas. Ideal para emprendimientos o negocios que recién comienzan.",
+      price: "$150.000 CLP",
+      image: "../img/galeria/planweb1.jpg",
+      whatsapp: "https://wa.me/56999442312?text=Hola%2C%20quiero%20el%20Plan%20B%C3%A1sico%20de%20p%C3%A1gina%20web%20de%20DaveTech.cl"
+    },
+    intermediate: {
+      title: "Plan Intermedio",
+      description: "Sitio web profesional con hasta 10 páginas, integración de formularios y optimización SEO básica.",
+      price: "$300.000 CLP",
+      image: "../img/galeria/planweb2.jpg",
+      whatsapp: "https://wa.me/56999442312?text=Hola%2C%20quiero%20el%20Plan%20Intermedio%20de%20p%C3%A1gina%20web%20de%20DaveTech.cl"
+    },
+    advanced: {
+      title: "Plan Avanzado",
+      description: "Sitio web completo con tienda en línea, funcionalidades personalizadas y soporte premium.",
+      price: "$600.000 CLP",
+      image: "../img/galeria/planweb3.jpg",
+      whatsapp: "https://wa.me/56999442312?text=Hola%2C%20quiero%20el%20Plan%20Avanzado%20de%20p%C3%A1gina%20web%20de%20DaveTech.cl"
+    }
+  };
+  function openPlanModal(planKey) {
+    const plan = plans[planKey];
+    if (!plan) return;
+    document.getElementById('modal-plan-title').textContent = plan.title;
+    document.getElementById('modal-plan-description').textContent = plan.description;
+    document.getElementById('modal-plan-price').textContent = plan.price;
+    document.getElementById('modal-plan-image').src = plan.image;
+    document.getElementById('modal-plan-image').alt = plan.title;
+    document.getElementById('modal-plan-whatsapp').href = plan.whatsapp;
+    document.getElementById('plan-modal').classList.remove('hidden');
+  }
+  function closePlanModal() {
+    document.getElementById('plan-modal').classList.add('hidden');
+  }
+  // Cerrar modal al hacer click fuera del contenido
+  document.addEventListener('click', function(e) {
+    const modal = document.getElementById('plan-modal');
+    if (!modal.classList.contains('hidden') && e.target === modal) {
+      closePlanModal();
+    }
+  });
+</script>
+</body>
+</html>
+
