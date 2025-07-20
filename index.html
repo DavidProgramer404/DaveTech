@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
   <link rel="stylesheet" href="./css/style.css">
   <script src="./js/script.js"></script>
+  <script src="./js/ham.js"></script>
+  
+  
   <meta name="description" content="Soporte técnico profesional, soluciones tecnológicas, mantención, instalación de software y asistencia remota en Chile. DaveTech.cl, tu aliado tecnológico.">
   <meta name="keywords" content="soporte técnico, tecnología, mantención, instalación software, asistencia remota, DaveTech, Chile, informática, servicios TI">
   <meta name="author" content="DaveTech.cl">
@@ -23,6 +26,7 @@
   <meta name="twitter:description" content="Soluciones tecnológicas para empresas y hogares en Chile. Soporte remoto, presencial, mantención y más.">
   <meta name="twitter:image" content="https://davetech.cl/img/og-image.png">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  
 </head>
 <body>
 
@@ -37,6 +41,7 @@
       <button id="custom-alert-ok" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">OK</button>
     </div>
   </div>
+  
   <header class="bg-tech tech-border py-4">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div>
@@ -45,28 +50,37 @@
         </h1>
         <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
       </div>
+      
+      <!-- Navegación principal -->
+      <button id="mobile-toggle" class="md:hidden text-white" aria-controls="navbar-nav" aria-expanded="false" aria-label="Abrir menú">
+    <i class="fas fa-bars text-xl"></i>
+</button>
 
-      <!-- Desktop navigation: hidden on mobile, visible on md+ -->
-      <nav class="hidden md:flex space-x-6 text-gray-300">
-        <a href="/" class="hover:text-white">Inicio</a>
-        <a href="/" class="hover:text-white">Servicios</a>
-        <a href="pages/nosotros.html" class="hover:text-white">Nosotros</a>
-        <a href="/admin/login.html" class="hover:text-white">Admin</a>
-        <a href="#" class="hover:text-white">Contacto</a>
-        <a href="users/login.html" class="hover:text-white login-button">Login</a>
-        <span class="user-info hidden text-white"></span>
-        <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
-      </nav>
+<nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
+    </nav>
 
-      <!-- existing hamburger button for mobile -->
-      <button class="md:hidden text-white">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
+<nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
+    <a href="/" class="hover:text-white">Inicio</a>
+    <div class="dropdown relative">
+        <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false" aria-haspopup="true">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
+            <a href="pages/web_corporativa.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web Corporativa</a>
+            <a href="pages/tienda_online.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Tienda Online</a>
+            <a href="pages/one_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One Page</a>
+            <a href="pages/landing_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Landing Page</a>
+        </div>
     </div>
-    <!-- mobile-nav will be injected here by script -->
-  </header>
+    <a href="pages/nosotros.html" class="hover:text-white">Nosotros</a>
+    <a href="/admin/login.html" class="hover:text-white">Admin</a>
+    <a href="#" class="hover:text-white">Contacto</a>
+    <a href="users/login.html" class="hover:text-white login-button">Login</a>
+    <span class="user-info hidden text-white"></span>
+    <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+</nav>
 
-  <main class="container mx-auto px-4 py-8">
+    </div>
+    </div>
+    <main class="container mx-auto px-4 py-8">
     <section class="mb-10">
       <div class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-8 mb-10 shadow-lg tech-border">
         <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Soporte Técnico <span class="text-cyan-400">Profesional</span></h2>
@@ -77,18 +91,7 @@
         <button id="start-quote" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-md button-tech">
           Cotizar Servicio
         </button>
-
-        <!-- Nueva sección de ventas de páginas web -->
-        <section class="mt-10 bg-gradient-to-r from-purple-800 to-purple-700 rounded-xl p-8 shadow-lg tech-border">
-          <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Ventas de <span class="text-cyan-400">Páginas Web</span></h2>
-          <p class="text-gray-300 text-lg mb-6">
-            Ofrecemos servicios completos para la creación de sitios web modernos, responsivos y optimizados para tu negocio. Desde páginas corporativas hasta tiendas en línea, adaptamos la solución a tus necesidades.
-          </p>
-          <a href="pages/ventas_paginas_web.html" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Más Información</a>
-        </section>
-      </div>
-
-      <div id="quote-wizard" class="bg-gray-900 rounded-xl p-6 shadow-lg hidden">
+        <div id="quote-wizard" class="bg-gray-900 rounded-xl p-6 shadow-lg hidden">
         <!-- Steps indicator -->
         <div class="flex items-center mb-8">
           <div class="step active-step flex items-center">
@@ -460,6 +463,67 @@
           </div>
         </div>
         </div>
+
+<section class="mt-10 bg-gradient-to-r from-blue-800 to-blue-700 rounded-xl p-8 shadow-lg tech-border">
+  <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Servicios <span class="text-cyan-400">Web</span></h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Web Corporativa -->
+    <div class="service-card card-glow bg-gray-800 rounded-xl p-6">
+      <div class="text-blue-500 text-4xl mb-4">
+        <i class="fas fa-building"></i>
+      </div>
+      <h4 class="text-xl font-bold mb-2">Web Corporativa</h4>
+      <p class="text-gray-400 mb-4">Sitio web profesional para tu empresa</p>
+      <a href="pages/web_corporativa.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-block">Ver más</a>
+    </div>
+
+    <!-- Tienda Online -->
+    <div class="service-card card-glow bg-gray-800 rounded-xl p-6">
+      <div class="text-blue-500 text-4xl mb-4">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <h4 class="text-xl font-bold mb-2">Tienda Online</h4>
+      <p class="text-gray-400 mb-4">Vende tus productos en línea</p>
+      <a href="pages/tienda_online.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-block">Ver más</a>
+    </div>
+
+    <!-- One Page -->
+    <div class="service-card card-glow bg-gray-800 rounded-xl p-6">
+      <div class="text-blue-500 text-4xl mb-4">
+        <i class="fas fa-file"></i>
+      </div>
+      <h4 class="text-xl font-bold mb-2">One Page</h4>
+      <p class="text-gray-400 mb-4">Sitio web de una página</p>
+      <a href="pages/one_page.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-block">Ver más</a>
+    </div>
+
+    <!-- Landing Page -->
+    <div class="service-card card-glow bg-gray-800 rounded-xl p-6">
+      <div class="text-blue-500 text-4xl mb-4">
+        <i class="fas fa-rocket"></i>
+      </div>
+      <h4 class="text-xl font-bold mb-2">Landing Page</h4>
+      <p class="text-gray-400 mb-4">Página de aterrizaje para campañas</p>
+      <a href="pages/landing_page.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-block">Ver más</a>
+    </div>
+  </div>
+</section>
+        <!-- Nueva sección de ventas de páginas web -->
+        <section class="mt-10 bg-gradient-to-r from-purple-800 to-purple-700 rounded-xl p-8 shadow-lg tech-border">
+          <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Ventas de <span class="text-cyan-400">Páginas Web</span></h2>
+          <p class="text-gray-300 text-lg mb-6">
+            Ofrecemos servicios completos para la creación de sitios web modernos, responsivos y optimizados para tu negocio. Desde páginas corporativas hasta tiendas en línea, adaptamos la solución a tus necesidades.
+          </p>
+          <a href="pages/ventas_paginas_web.html" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Más Información</a>
+        </section>
+
+
+        
+         
+      </div>
+
+      
       </section>
 
       <!-- Edit Quote Modal -->
@@ -529,6 +593,10 @@
       </div>
     </section>
   </main>
+    <!-- mobile-nav will be injected here by script -->
+  </header>
+
+  
 
   <footer class="bg-gray-900 py-8 border-t border-gray-800">
     <div class="container mx-auto px-4">
@@ -638,7 +706,8 @@
     </div>
   </div>
 
+  
+  
   <script src="./js/script.js"></script>
-
 </body>
 </html>

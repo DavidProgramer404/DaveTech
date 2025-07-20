@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Page | DaveTech.cl</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="bg-tech tech-border py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold logo-font text-white">
+          <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span class="text-xs align-top">.cl</span>
+        </h1>
+        <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-gray-300">
+        <a href="../index.html" class="hover:text-white">Inicio</a>
+        <div class="relative group">
+          <button class="hover:text-white focus:outline-none flex items-center">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <div class="absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-50 hidden group-hover:block">
+            <a href="web_corporativa.html" class="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white">Web Corporativa</a>
+            <a href="tienda_online.html" class="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white">Tienda Online</a>
+            <a href="one_page.html" class="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white">One Page</a>
+            <a href="landing_page.html" class="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white">Landing Page</a>
+          </div>
+        </div>
+        <a href="nosotros.html" class="hover:text-white">Nosotros</a>
+        <a href="../admin/login.html" class="hover:text-white">Admin</a>
+        <a href="#" class="hover:text-white">Contacto</a>
+        <a href="../users/login.html" class="hover:text-white login-button">Login</a>
+        <span class="user-info hidden text-white"></span>
+        <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+      </nav>
+      <button class="md:hidden text-white">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </header>
+  <main class="container mx-auto px-4 py-12">
+    <section class="bg-gradient-to-r from-green-800 to-green-700 rounded-xl p-8 shadow-lg tech-border mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Sitio <span class="text-cyan-400">One Page</span></h2>
+      <p class="text-gray-300 text-lg mb-6">Presenta toda la información de tu negocio en una sola página moderna y atractiva. Incluye:</p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6">
+        <li>Diseño personalizado y responsivo</li>
+        <li>Secciones: Inicio, Servicios, Nosotros, Contacto</li>
+        <li>Formulario de contacto integrado</li>
+        <li>Optimización SEO básica</li>
+        <li>Integración con redes sociales</li>
+        <li>Soporte técnico y capacitación</li>
+      </ul>
+      <a href="https://wa.me/56912345678?text=Quiero%20una%20One%20Page" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Solicitar Cotización</a>
+    </section>
+  </main>
+  <footer class="bg-gray-800 py-6 mt-10">
+    <div class="container mx-auto px-4 text-center text-gray-400">
+      &copy; 2024 DaveTech.cl - Todos los derechos reservados
+    </div>
+  </footer>
+</body>
+</html>

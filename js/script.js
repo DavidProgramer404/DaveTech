@@ -522,16 +522,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const menuButton = document.getElementById("menu-button");
-const mainNavLinks = document.getElementById("main-nav-links");
-const iconHamburger = menuButton.querySelector(".icon-hamburger");
-const iconClose = menuButton.querySelector(".icon-close");
 
-menuButton.addEventListener("click", () => {
-  // Alterna la visibilidad del menú de navegación
-  mainNavLinks.classList.toggle("hidden");
 
-  // Alterna los iconos del botón
-  iconHamburger.classList.toggle("hidden");
-  iconClose.classList.toggle("hidden");
-});
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Corporativa | DaveTech.cl</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/script.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/ham.js"></script>
+</head>
+<body class="bg-gray-900 text-white">
+  <header class="bg-tech tech-border py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div>
+        <h1 class="text-3xl font-bold logo-font text-white">
+          <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span class="text-xs align-top">.cl</span>
+        </h1>
+        <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
+      </div>
+      <!-- Navegación principal -->
+      <button id="mobile-toggle" class="md:hidden text-white" aria-controls="navbar-nav" aria-expanded="false" aria-label="Abrir menú">
+    <i class="fas fa-bars text-xl"></i>
+</button>
+
+<nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
+    </nav>
+
+<nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
+    <a href="/" class="hover:text-white">Inicio</a>
+    <div class="dropdown relative">
+        <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false" aria-haspopup="true">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
+            <a href="pages/web_corporativa.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web Corporativa</a>
+            <a href="pages/tienda_online.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Tienda Online</a>
+            <a href="pages/one_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One Page</a>
+            <a href="pages/landing_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Landing Page</a>
+        </div>
+    </div>
+    <a href="/pages/nosotros.html" class="hover:text-white">Nosotros</a>
+    <a href="/admin/login.html" class="hover:text-white">Admin</a>
+    <a href="#" class="hover:text-white">Contacto</a>
+    <a href="users/login.html" class="hover:text-white login-button">Login</a>
+    <span class="user-info hidden text-white"></span>
+    <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+</nav>
+    </div>
+    <main class="container mx-auto px-4 py-12">
+    <section class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-8 shadow-lg tech-border mb-10">
+      <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Web <span class="text-cyan-400">Corporativa</span></h2>
+      <p class="text-gray-300 text-lg mb-6">Impulsa la presencia digital de tu empresa con una web profesional, moderna y adaptada a tu marca. Incluye:
+      </p>
+      <ul class="list-disc pl-6 text-gray-300 mb-6">
+        <li>Diseño personalizado y responsivo</li>
+        <li>Hasta 6 secciones (Inicio, Nosotros, Servicios, Portafolio, Blog, Contacto)</li>
+        <li>Formulario de contacto integrado</li>
+        <li>Optimización SEO básica</li>
+        <li>Integración con redes sociales</li>
+        <li>Soporte técnico y capacitación</li>
+      </ul>
+      <a href="https://wa.me/56912345678?text=Quiero%20una%20Web%20Corporativa" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Solicitar Cotización</a>
+    </section>
+  </main>
+  </header>
+  
+  <footer class="bg-gray-800 py-6 mt-10">
+    <div class="container mx-auto px-4 text-center text-gray-400">
+      &copy; 2024 DaveTech.cl - Todos los derechos reservados
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
