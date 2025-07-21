@@ -82,6 +82,12 @@
     <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
       <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+<script>
+  // Close mobile menu when X button is clicked
+  document.getElementById('mobile-menu-close').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.add('hidden');
+  });
+</script>
       </svg>
     </button>
   </div>
