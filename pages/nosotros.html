@@ -1,181 +1,363 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - DaveTech</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
-    <link rel="stylesheet" href="../css/style.css">
-    <meta name="description" content="Conoce al equipo de DaveTech.cl, expertos en soporte técnico, mantención y soluciones tecnológicas en Chile. Más de 10 años de experiencia.">
-    <meta name="keywords" content="nosotros, equipo, soporte técnico, tecnología, DaveTech, Chile, servicios TI, mantención, instalación software">
-    <meta name="author" content="DaveTech.cl">
-    <link rel="canonical" href="https://davetech.cl/pages/nosotros.html">
-    <meta property="og:title" content="Nosotros - DaveTech.cl">
-    <meta property="og:description" content="Conoce al equipo de DaveTech.cl, expertos en soporte técnico, mantención y soluciones tecnológicas en Chile.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://davetech.cl/pages/nosotros.html">
-    <meta property="og:image" content="https://davetech.cl/img/og-image.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nosotros - DaveTech.cl">
-    <meta name="twitter:description" content="Conoce al equipo de DaveTech.cl, expertos en soporte técnico, mantención y soluciones tecnológicas en Chile.">
-    <meta name="twitter:image" content="https://davetech.cl/img/og-image.png">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mi - DaveTech</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description"
+    content="Conoce al equipo de DaveTech.cl, expertos en soporte técnico, mantención y soluciones tecnológicas en Chile. Más de 10 años de experiencia.">
+  <meta name="keywords"
+    content="nosotros, equipo, soporte técnico, tecnología, DaveTech, Chile, servicios TI, mantención, instalación software">
+  <meta name="author" content="DaveTech.cl">
+  <link rel="canonical" href="https://davetech.cl/pages/nosotros.html">
+  <meta property="og:title" content="Nosotros - DaveTech.cl">
+  <meta property="og:description"
+    content="Conoce al equipo de DaveTech.cl, expertos en soporte técnico, mantención y soluciones tecnológicas en Chile.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://davetech.cl/pages/nosotros.html">
+  <meta property="og:image" content="https://davetech.cl/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nosotros - DaveTech.cl">
+  <meta name="twitter:description"
+    content="Conoce al equipo de DaveTech.cl, expertos en soporte técnico, mantención y soluciones tecnológicas en Chile.">
+  <meta name="twitter:image" content="https://davetech.cl/img/og-image.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <!-- <script src="../js/ham.js"></script> -->
+  <script src="../js/menu.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/services.js"></script>
 </head>
-<body class="bg-gray-100">
-    <header class="bg-tech tech-border py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-          <div>
-            <h1 class="text-3xl font-bold logo-font text-white">
-              <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span class="text-xs align-top">.cl</span>
-            </h1>
-            <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
-          </div>
-    
-          <!-- Desktop navigation: hidden on mobile, visible on md+ -->
-          <nav class="hidden md:flex space-x-6 text-gray-300">
-            <a href="../index.html" class="hover:text-white">Inicio</a>
-            <a href="#" class="hover:text-white">Servicios</a>
-            <a href="../pages/nosotros.html" class="hover:text-white">Nosotros</a>
-            <a href="/admin/login.html" class="hover:text-white">Admin</a>
-            <a href="#" class="hover:text-white">Contacto</a>
-          </nav>
-    
-          <!-- existing hamburger button for mobile -->
-          <button class="md:hidden text-white">
-            <i class="fas fa-bars text-xl"></i>
+
+<body class="bg-azul-oscuro-profundo text-blanco-profesional">
+  <header class="bg-tech tech-border py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <div>
+        <a href="../" class="block">
+          <h1 class="text-3xl font-bold logo-font text-white">
+            <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span>
+            <span class="text-xs align-top">.cl</span>
+          </h1>
+          <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
+        </a>
+      </div>
+
+      <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 hidden">
+        <div class="flex justify-end p-4">
+          <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
           </button>
         </div>
-        <!-- mobile-nav will be injected here by script -->
-      </header>
-      
-      <!-- Informacion de nosotros -->
-      <section class="bg-gray-200 py-12">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-black mb-6">Sobre Nosotros</h2>
-          <p class="text-lg text-gray-700 mb-8">
-            Somos una empresa dedicada a ofrecer soluciones tecnológicas de vanguardia a empresas y hogares en todo Chile. Con más de 10 años de experiencia en el mercado, nos especializamos en brindar servicios de soporte técnico remoto, soporte presencial y mantenimiento de equipos informáticos. Nuestro equipo está formado por profesionales altamente capacitados y experimentados en el campo de la tecnología.
-          </p>
-          <p class="text-lg text-gray-700 mb-8">
-            Nuestros servicios incluyen:
-          </p>
-          <ul class="list-disc list-inside text-gray-700 
+        <nav class="flex flex-col items-center space-y-6 text-xl text-gray-300 pt-10">
+          <a href="/" class="hover:text-white">Inicio</a>
+          <div class="relative">
+            <button id="mobile-services-dropdown-btn"
+              class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center">
+              Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+            </button>
+            <div id="mobile-services-dropdown" class="mobile-dropdown-menu hidden mt-2 space-y-2 drop-shadow-2xl">
+              <a href="pages/web_corporativa.html" class="block text-gray-300 hover:text-white pl-4">Web Corporativa</a>
+              <a href="pages/tienda_online.html" class="block text-gray-300 hover:text-white pl-4">Tienda Online</a>
+              <a href="pages/one_page.html" class="block text-gray-300 hover:text-white pl-4">One Page</a>
+              <a href="pages/landing_page.html" class="block text-gray-300 hover:text-white pl-4">Landing Page</a>
+            </div>
+          </div>
+          <a href="pages/nosotros.html" class="hover:text-white">Nosotros</a>
+          <a href="/admin/login.html" class="hover:text-white">Admin</a>
+          <a href="pages/contacto.html" class="hover:text-white">Contacto</a>
+          <a href="users/login.html" class="hover:text-white login-button">Login</a>
+          <span class="user-info hidden text-white"></span>
+          <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+        </nav>
+      </div>
+
+
+
+
+      <nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row"
+        aria-label="Menú principal">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <div class="dropdown relative">
+          <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false"
+            aria-haspopup="true">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
+            <a href="../pages/web_corporativa.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web
+              Corporativa</a>
+            <a href="../pages/tienda_online.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">Tienda Online</a>
+            <a href="../pages/one_page.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One
+              Page</a>
+            <a href="../pages/landing_page.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">Landing Page</a>
+          </div>
+        </div>
+        <a href="../pages/nosotros.html" class="hover:text-white">Nosotros</a>
+        <a href="/admin/login.html" class="hover:text-white">Admin</a>
+        <a href="/pages/contacto.html" class="hover:text-white">Contacto</a>
+        <a href="users/login.html" class="hover:text-white login-button">Login</a>
+        <span class="user-info hidden text-white"></span>
+        <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+      </nav>
+
+
+    </div>
+    <section class="bg-gray-200 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-black mb-6">Sobre Nosotros</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          Somos una empresa dedicada a ofrecer soluciones tecnológicas de vanguardia a empresas y hogares en todo Chile.
+          Con más de 10 años de experiencia en el mercado, nos especializamos en brindar servicios de soporte técnico
+          remoto, soporte presencial y mantenimiento de equipos informáticos. Nuestro equipo está formado por
+          profesionales altamente capacitados y experimentados en el campo de la tecnología.
+        </p>
+        <p class="text-lg text-gray-700 mb-8">
+          Nuestros servicios incluyen:
+        </p>
+        <ul class="list-disc list-inside text-gray-700 
           text-sm">
-            <li>Soporte Remoto: Brindamos soporte técnico a través de videollamadas o chat en tiempo real para solucionar problemas con nuestros equipos.</li>
-            <li>Soporte Presencial: Ofrecemos asesoramiento técnico en nuestras oficinas para resolver problemas y brindar soluciones personalizadas.</li>
-            <li>Mantenimiento y Actualización: Realizamos revisiones periódicas de nuestros equipos para garantizar su rendimiento óptimo.</li>
-            <li>Instalación de Software: Brindamos servicios de instalación y configuración de software para satisfacer las necesidades de nuestros clientes.</li>
+          <li>Soporte Remoto: Brindamos soporte técnico a través de videollamadas o chat en tiempo real para solucionar
+            problemas con nuestros equipos.</li>
+          <li>Soporte Presencial: Ofrecemos asesoramiento técnico en nuestras oficinas para resolver problemas y brindar
+            soluciones personalizadas.</li>
+          <li>Mantenimiento y Actualización: Realizamos revisiones periódicas de nuestros equipos para garantizar su
+            rendimiento óptimo.</li>
+          <li>Instalación de Software: Brindamos servicios de instalación y configuración de software para satisfacer
+            las necesidades de nuestros clientes.</li>
+        </ul>
+        <p class="text-lg text-gray-700 mb-8">
+          Nuestra misión es brindar soluciones tecnológicas de vanguardia que ayuden a nuestros clientes a mejorar su
+          rendimiento, eficiencia y seguridad. Trabajamos con empresas de todos los tamaños y sectores para ofrecer
+          soluciones personalizadas que se adapten a sus necesidades específicas.
+        </p>
+        <p class="text-lg text-gray-700 mb-8">
+          En DaveTech, creemos en la importancia de la tecnología para mejorar la calidad de vida de nuestros clientes.
+          Nos esforzamos por ofrecer soluciones tecnológicas innovadoras y de alta calidad que se ajusten a las
+          necesidades de cada cliente.
+        </p>
+      </div>
+    </section>
+    <!-- mobile-nav will be injected here by script -->
+
+  </header>
+
+  <!-- Sobre mi -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-xl font-bold text-gray-800 mb-4">¿Quién está detrás de DaveTech?</>
+        <p class="text-5xl text-gray-600">Hola, soy David <span class="text-red-400">Valdés</span></p>
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
+        <div class="w-full md:w-1/3">
+          <img src="../img/equipo/dave.jpg" alt="David Parra - Fundador de DaveTech" class="rounded-lg shadow-lg w-full">
+        </div>
+        <div class="w-full md:w-2/3">
+          <p class="text-gray-700 mb-6">
+            Como fundador de DaveTech, soy un desarrollador con más de 2 años de experiencia creando soluciones digitales personalizadas. Me especializo en transformar ideas en plataformas tecnológicas atractivas y funcionales que impulsan el crecimiento de negocios y mejoran la experiencia digital de hogares.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Personalización total</h3>
+          <p class="text-gray-600">Cada cliente tiene necesidades únicas. Diseñamos soluciones a medida que reflejan la identidad y objetivos específicos de cada proyecto.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Comunicación constante</h3>
+          <p class="text-gray-600">Mantenemos un diálogo abierto durante todo el proceso, disponibles vía llamadas, videollamadas o WhatsApp para asegurar resultados óptimos.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4">Adaptabilidad</h3>
+          <p class="text-gray-600">Ofrecemos soluciones escalables que se ajustan a diferentes presupuestos y cronogramas, sin comprometer la calidad.</p>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h3 class="text-2xl font-bold text-gray-800 mb-6">¿A quién ayudamos?</h3>
+        <p class="text-gray-700 mb-8">
+          Trabajamos principalmente con pequeñas y medianas empresas, así como con hogares que buscan optimizar su experiencia tecnológica. Nuestro objetivo es proporcionar soluciones tecnológicas accesibles y efectivas que impulsen el éxito de nuestros clientes.
+        </p>
+        <a href="../pages/contacto.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+          Contáctanos
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Informacion de nosotros -->
+
+
+  <!-- Reconocimiento de la empresa clientes-->
+<section class="bg-gray-100 py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Lo que dicen nuestros clientes</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Testimonial 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <img src="../img/testimonials/MariaGonzalezDueñadePasteleríaDulce.jpg" alt="Cliente 1" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">María González</h4>
+            <p class="text-gray-600 text-sm">Dueña de Pastelería Dulce</p>
+          </div>
+        </div>
+        <p class="text-gray-700">"DaveTech transformó completamente nuestra presencia digital. Ahora tenemos una web profesional que refleja perfectamente nuestra marca y ha aumentado significativamente nuestras ventas online."</p>
+        <div class="mt-4 text-yellow-400">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <img src="../img/testimonials/CarlosRuiz.jpg" alt="Cliente 2" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">Carlos Ruiz</h4>
+            <p class="text-gray-600 text-sm">Gerente de TechSolutions</p>
+          </div>
+        </div>
+        <p class="text-gray-700">"El servicio de soporte técnico es excepcional. Siempre están disponibles cuando los necesitamos y resuelven nuestros problemas de manera rápida y eficiente."</p>
+        <div class="mt-4 text-yellow-400">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <div class="flex items-center mb-4">
+          <img src="../img/testimonials/AnaMartinez.jpg" alt="Cliente 3" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="font-semibold text-gray-800">Ana Martínez</h4>
+            <p class="text-gray-600 text-sm">Propietaria de Boutique AM</p>
+          </div>
+        </div>
+        <p class="text-gray-700">"La atención personalizada y el compromiso con nuestro proyecto fueron excepcionales. DaveTech entendió perfectamente nuestras necesidades y entregó más de lo que esperábamos."</p>
+        <div class="mt-4 text-yellow-400">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="bg-gray-900 py-8 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold logo-font text-white mb-4">
+            <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span
+              class="text-xs align-top">.cl</span>
+          </h3>
+          <p class="text-gray-400 mb-4">Soluciones tecnológicas para empresas y hogares en todo Chile.</p>
+          <div class="flex space-x-4">
+            <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Servicios</h4>
+          <ul class="space-y-2">
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte
+                Remoto</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte
+                Presencial</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Mantención y
+                Actualización</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Instalación de
+                Software</a></li>
           </ul>
-          <p class="text-lg text-gray-700 mb-8">
-            Nuestra misión es brindar soluciones tecnológicas de vanguardia que ayuden a nuestros clientes a mejorar su rendimiento, eficiencia y seguridad. Trabajamos con empresas de todos los tamaños y sectores para ofrecer soluciones personalizadas que se adapten a sus necesidades específicas.
-          </p>
-          <p class="text-lg text-gray-700 mb-8">
-            En DaveTech, creemos en la importancia de la tecnología para mejorar la calidad de vida de nuestros clientes. Nos esforzamos por ofrecer soluciones tecnológicas innovadoras y de alta calidad que se ajusten a las necesidades de cada cliente.
-          </p>
         </div>
-      </section>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h4>
+          <ul class="space-y-2">
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Inicio</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Sobre
+                Nosotros</a></li>
+            <li><a href="javascript:void(0)"
+                class="text-gray-400 hover:text-blue-400 transition-colors">Cotizaciones</a></li>
+            <li><a href="https://shop-murex-eight.vercel.app/"
+                class="text-gray-400 hover:text-blue-400 transition-colors">DaveStore 🏪🏬🛍️🛒</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Contacto</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">Av. Providencia 1234, Santiago, Chile</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone text-blue-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">+56 9 9944 2312</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope text-blue-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">contacto@davetech.cl</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-clock text-blue-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">Lun-Vie: 9:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 DaveTech.cl - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
 
-      <!-- Nuestro equipo -->
-      <section class="bg-gray-100 py-12">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-bold text-black mb-6">Nuestro Equipo</h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../img/equipo/equipo1.png" alt="Equipo 1" class="w-full h-48 object-cover rounded-md mb-4">
-              <h3 class="text-xl font-semibold text-black mb-2">Juan Pérez</h3>
-              <p class="text-gray-700">Gerente de Soporte</p>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <img src="../img/equipo/equipo2.png" alt="Equipo 2" class="w-full h-48 object-cover rounded-md mb-4">
-              <h3 class="text-xl font-semibold text-black mb-2">María González</h3>
-              <p class="text-gray-700">Técnico de Soporte</p>
-            </div>
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <!-- que se le vea la cara  -->
-              <img src="../img/equipo/equipo3.png" alt="Equipo 3" class=" w-full h-48 object-cover rounded-md mb-4">
-              <h3 class="text-xl font-semibold text-black mb-2">Pedro López</h3>
-              <p class="text-gray-700">Técnico de Mantenimiento</p>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- WhatsApp Button -->
+  <a href="javascript:void(0)" id="whatsapp-btn" class="whatsapp-button">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
 
-    
-      <footer class="bg-gray-900 py-8 border-t border-gray-800">
-        <div class="container mx-auto px-4">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 class="text-xl font-bold logo-font text-white mb-4">
-                <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span class="text-xs align-top">.cl</span>
-              </h3>
-              <p class="text-gray-400 mb-4">Soluciones tecnológicas para empresas y hogares en todo Chile.</p>
-              <div class="flex space-x-4">
-                <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 class="text-lg font-semibold text-white mb-4">Servicios</h4>
-              <ul class="space-y-2">
-                <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte Remoto</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte Presencial</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Mantención y Actualización</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Instalación de Software</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h4>
-              <ul class="space-y-2">
-                <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Inicio</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Sobre Nosotros</a></li>
-                <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Cotizaciones</a></li>
-                <li><a href="https://shop-murex-eight.vercel.app/" class="text-gray-400 hover:text-blue-400 transition-colors">DaveStore 🏪🏬🛍️🛒</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 class="text-lg font-semibold text-white mb-4">Contacto</h4>
-              <ul class="space-y-2">
-                <li class="flex items-start">
-                  <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
-                  <span class="text-gray-400">Av. Providencia 1234, Santiago, Chile</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-phone text-blue-500 mt-1 mr-3"></i>
-                  <span class="text-gray-400">+56 9 8765 4321</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-envelope text-blue-500 mt-1 mr-3"></i>
-                  <span class="text-gray-400">contacto@davetech.cl</span>
-                </li>
-                <li class="flex items-start">
-                  <i class="fas fa-clock text-blue-500 mt-1 mr-3"></i>
-                  <span class="text-gray-400">Lun-Vie: 9:00 - 18:00</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
-            <p>&copy; 2025 DaveTech.cl - Todos los derechos reservados</p>
-          </div>
-        </div>
-      </footer>
-    
-      <!-- WhatsApp Button -->
-      <a href="javascript:void(0)" id="whatsapp-btn" class="whatsapp-button">
-        <i class="fab fa-whatsapp text-white text-3xl"></i>
-      </a>
-    
-      <script src="../js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
+
 </html>

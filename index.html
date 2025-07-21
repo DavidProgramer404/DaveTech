@@ -1,609 +1,667 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DaveTech.cl - Soporte Técnico Profesional</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
   <link rel="stylesheet" href="./css/style.css">
+  
+  <!-- CDN BOOSTRAP -->
+  <link href="URL_ADDRESS.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="./js/script.js"></script>
+  <script src="./js/menu.js"></script>
   <script src="./js/ham.js"></script>
-  
-  
-  <meta name="description" content="Soporte técnico profesional, soluciones tecnológicas, mantención, instalación de software y asistencia remota en Chile. DaveTech.cl, tu aliado tecnológico.">
-  <meta name="keywords" content="soporte técnico, tecnología, mantención, instalación software, asistencia remota, DaveTech, Chile, informática, servicios TI">
+
+  <meta name="description"
+    content="Soporte técnico profesional, soluciones tecnológicas, mantención, instalación de software y asistencia remota en Chile. DaveTech.cl, tu aliado tecnológico.">
+  <meta name="keywords"
+    content="soporte técnico, tecnología, mantención, instalación software, asistencia remota, DaveTech, Chile, informática, servicios TI">
   <meta name="author" content="DaveTech.cl">
   <link rel="canonical" href="https://davetech.cl/">
   <meta property="og:title" content="DaveTech.cl - Soporte Técnico Profesional">
-  <meta property="og:description" content="Soluciones tecnológicas para empresas y hogares en Chile. Soporte remoto, presencial, mantención y más.">
+  <meta property="og:description"
+    content="Soluciones tecnológicas para empresas y hogares en Chile. Soporte remoto, presencial, mantención y más.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://davetech.cl/">
   <meta property="og:image" content="https://davetech.cl/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="DaveTech.cl - Soporte Técnico Profesional">
-  <meta name="twitter:description" content="Soluciones tecnológicas para empresas y hogares en Chile. Soporte remoto, presencial, mantención y más.">
+  <meta name="twitter:description"
+    content="Soluciones tecnológicas para empresas y hogares en Chile. Soporte remoto, presencial, mantención y más.">
   <meta name="twitter:image" content="https://davetech.cl/img/og-image.png">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  
-</head>
-<body>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-azul-oscuro-profundo text-blanco-profesional">
+
+   
   <!-- Custom Alert Modal -->
-  <div id="custom-alert-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden">
+  <div id="custom-alert-modal"
+    class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden">
     <div class="bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm w-full border border-blue-500">
       <div class="flex justify-between items-center mb-4">
         <h3 id="custom-alert-title" class="text-xl font-bold text-white"></h3>
         <button id="custom-alert-close" class="text-gray-400 hover:text-gray-200 text-2xl">&times;</button>
       </div>
       <p id="custom-alert-message" class="text-gray-300 mb-6"></p>
-      <button id="custom-alert-ok" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">OK</button>
+      <button id="custom-alert-ok"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">OK</button>
     </div>
   </div>
-  
+
   <header class="bg-tech tech-border py-4">
     <div class="container mx-auto px-4 flex justify-between items-center">
-      <div>
-        <h1 class="text-3xl font-bold logo-font text-white">
-          <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span class="text-xs align-top">.cl</span>
-        </h1>
-        <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
-      </div>
-      
-      <!-- Navegación principal -->
-      <button id="mobile-toggle" class="md:hidden text-white" aria-controls="navbar-nav" aria-expanded="false" aria-label="Abrir menú">
-    <i class="fas fa-bars text-xl"></i>
+<div>
+  <a href="./" class="block">
+    <h1 class="text-3xl font-bold logo-font text-white">
+      <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span>
+      <span class="text-xs align-top">.cl</span>
+    </h1>
+    <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
+  </a>
+</div>
+
+<button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+  <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+  </svg>
 </button>
 
-<nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
-    </nav>
-
-<nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
+<div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 hidden">
+  <div class="flex justify-end p-4">
+    <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <nav class="flex flex-col items-center space-y-6 text-xl text-gray-300 pt-10">
     <a href="/" class="hover:text-white">Inicio</a>
-    <div class="dropdown relative">
-        <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false" aria-haspopup="true">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
-        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
-            <a href="pages/web_corporativa.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web Corporativa</a>
-            <a href="pages/tienda_online.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Tienda Online</a>
-            <a href="pages/one_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One Page</a>
-            <a href="pages/landing_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Landing Page</a>
-        </div>
+    <div class="relative">
+      <button id="mobile-services-dropdown-btn" class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center">
+        Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+      </button>
+      <div id="mobile-services-dropdown" class="mobile-dropdown-menu hidden mt-2 space-y-2 drop-shadow-2xl">
+        <a href="pages/web_corporativa.html" class="block text-gray-300 hover:text-white pl-4">Web Corporativa</a>
+        <a href="pages/tienda_online.html" class="block text-gray-300 hover:text-white pl-4">Tienda Online</a>
+        <a href="pages/one_page.html" class="block text-gray-300 hover:text-white pl-4">One Page</a>
+        <a href="pages/landing_page.html" class="block text-gray-300 hover:text-white pl-4">Landing Page</a>
+      </div>
     </div>
     <a href="pages/nosotros.html" class="hover:text-white">Nosotros</a>
     <a href="/admin/login.html" class="hover:text-white">Admin</a>
-    <a href="#" class="hover:text-white">Contacto</a>
+    <a href="pages/contacto.html" class="hover:text-white">Contacto</a>
     <a href="users/login.html" class="hover:text-white login-button">Login</a>
     <span class="user-info hidden text-white"></span>
     <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
-</nav>
+  </nav>
+</div>
+    
+
+     
+
+      <nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row"
+        aria-label="Menú principal">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <div class="dropdown relative">
+          <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false"
+            aria-haspopup="true">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
+            <a href="pages/web_corporativa.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web
+              Corporativa</a>
+            <a href="pages/tienda_online.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">Tienda Online</a>
+            <a href="pages/one_page.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One
+              Page</a>
+            <a href="pages/landing_page.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">Landing Page</a>
+          </div>
+        </div>
+        <a href="pages/nosotros.html" class="hover:text-white">Nosotros</a>
+        <a href="/admin/login.html" class="hover:text-white">Admin</a>
+        <a href="/pages/contacto.html" class="hover:text-white">Contacto</a>
+        <a href="users/login.html" class="hover:text-white login-button">Login</a>
+        <span class="user-info hidden text-white"></span>
+        <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+      </nav>
 
     </div>
     </div>
     <main class="container mx-auto px-4 py-8">
-    <section class="mb-10">
-      <div class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-8 mb-10 shadow-lg tech-border">
-        <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Soporte Técnico <span class="text-cyan-400">Profesional</span></h2>
-        <p class="text-gray-300 text-lg mb-6">
-          Ofrecemos soluciones integrales para todas tus necesidades tecnológicas, tanto para empresas como para hogares. 
-          Nuestro equipo de expertos está disponible para ayudarte de manera remota o presencial.
-        </p>
-        <button id="start-quote" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-md button-tech">
-          Cotizar Servicio
-        </button>
-        <div id="quote-wizard" class="bg-gray-900 rounded-xl p-6 shadow-lg hidden">
-        <!-- Steps indicator -->
-        <div class="flex items-center mb-8">
-          <div class="step active-step flex items-center">
-            <div class="step-indicator">1</div>
-            <span class="text-sm font-medium mr-4">Seleccionar Servicio</span>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step flex items-center">
-            <div class="step-indicator">2</div>
-            <span class="text-sm font-medium mr-4">Opciones</span>
-          </div>
-          <div class="step-connector"></div>
-          <div class="step flex items-center">
-            <div class="step-indicator">3</div>
-            <span class="text-sm font-medium">Cotización</span>
-          </div>
-
-        </div>
-
-        <!-- Step 1: Service Selection -->
-        <div id="step1" class="wizard-section active">
-          <h3 class="text-2xl font-bold mb-6 text-white">Selecciona un Servicio</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- Remote Support -->
-            <div class="service-card card-glow bg-gray-800 rounded-xl p-6 cursor-pointer" data-service="remote">
-              <div class="text-blue-500 text-4xl mb-4">
-                <i class="fas fa-laptop-code"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-2">Soporte Remoto</h4>
-              <p class="text-gray-400 mb-4">Solución rápida a distancia mediante conexión segura a tu equipo</p>
-              <div class="price-tag inline-block admin-visible">
-                Desde $15.000 CLP
-              </div>
-            </div>
-
-            <!-- On-site Support -->
-            <div class="service-card card-glow bg-gray-800 rounded-xl p-6 cursor-pointer" data-service="onsite">
-              <div class="text-blue-500 text-4xl mb-4">
-                <i class="fas fa-tools"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-2">Soporte Presencial</h4>
-              <p class="text-gray-400 mb-4">Técnicos en tu hogar u oficina para resolver problemas en persona</p>
-              <div class="price-tag inline-block admin-visible">
-                Desde $25.000 CLP
-              </div>
-            </div>
-
-            <!-- Maintenance -->
-            <div class="service-card card-glow bg-gray-800 rounded-xl p-6 cursor-pointer" data-service="maintenance">
-              <div class="text-blue-500 text-4xl mb-4">
-                <i class="fas fa-sync-alt"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-2">Mantención y Actualización</h4>
-              <p class="text-gray-400 mb-4">Mantén tu equipo optimizado y actualizado con las últimas versiones</p>
-              <div class="price-tag inline-block admin-visible">
-                Desde $18.000 CLP
-              </div>
-            </div>
-
-            <!-- Software Installation -->
-            <div class="service-card card-glow bg-gray-800 rounded-xl p-6 cursor-pointer" data-service="software">
-              <div class="text-blue-500 text-4xl mb-4">
-                <i class="fas fa-download"></i>
-              </div>
-              <h4 class="text-xl font-bold mb-2">Instalación Software/OS</h4>
-              <p class="text-gray-400 mb-4">Instalación profesional de sistemas operativos y programas</p>
-              <div class="price-tag inline-block admin-visible">
-                Desde $20.000 CLP
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 2: Options & Add-ons -->
-        <div id="step2" class="wizard-section">
-          <div class="flex justify-between items-center mb-6">
-            <h3 class="text-2xl font-bold text-white">Opciones para <span id="service-name">Servicio</span></h3>
-            <button id="back-to-step1" class="text-blue-400 hover:text-blue-300">
-              <i class="fas fa-arrow-left mr-1"></i> Volver
-            </button>
-          </div>
-          
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div class="lg:col-span-2">
-              <!-- Remote Support Options -->
-              <div id="remote-options" class="options-panel bg-gray-800 rounded-xl p-6 mb-6 hidden">
-                <h4 class="text-lg font-semibold mb-4">Duración del servicio</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="1" data-price="15000">
-                    <h5 class="font-medium">1 Hora</h5>
-                    <p class="text-gray-400 text-sm">Solución rápida de problemas</p>
-                    <div class="price-tag mt-2 admin-visible">$15.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="2" data-price="25000">
-                    <h5 class="font-medium">2 Horas</h5>
-                    <p class="text-gray-400 text-sm">Problemas de complejidad media</p>
-                    <div class="price-tag mt-2 admin-visible">$25.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="3" data-price="35000">
-                    <h5 class="font-medium">3+ Horas</h5>
-                    <p class="text-gray-400 text-sm">Problemas complejos</p>
-                    <div class="price-tag mt-2 admin-visible">$35.000 CLP</div>
-                  </div>
-                </div>
-                
-                <h4 class="text-lg font-semibold mb-4">Prioridad</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="standard" data-price="0">
-                    <h5 class="font-medium">Estándar</h5>
-                    <p class="text-gray-400 text-sm">Respuesta en 24-48 horas</p>
-                    <div class="price-tag mt-2 admin-visible">Incluido</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="priority" data-price="10000">
-                    <h5 class="font-medium">Prioritario</h5>
-                    <p class="text-gray-400 text-sm">Respuesta en 12 horas</p>
-                    <div class="price-tag mt-2 admin-visible">+$10.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="urgent" data-price="20000">
-                    <h5 class="font-medium">Urgente</h5>
-                    <p class="text-gray-400 text-sm">Respuesta en 4 horas</p>
-                    <div class="price-tag mt-2 admin-visible">+$20.000 CLP</div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- On-site Support Options -->
-              <div id="onsite-options" class="options-panel bg-gray-800 rounded-xl p-6 mb-6 hidden">
-                <h4 class="text-lg font-semibold mb-4">Tipo de visita</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="regular" data-price="25000">
-                    <h5 class="font-medium">Visita Regular</h5>
-                    <p class="text-gray-400 text-sm">Programada con anticipación</p>
-                    <div class="price-tag mt-2 admin-visible">$25.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="same-day" data-price="40000">
-                    <h5 class="font-medium">Mismo Día</h5>
-                    <p class="text-gray-400 text-sm">Técnico en tu ubicación hoy mismo</p>
-                    <div class="price-tag mt-2 admin-visible">$40.000 CLP</div>
-                  </div>
-                </div>
-                
-                <h4 class="text-lg font-semibold mb-4">Horas de servicio</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="2h" data-price="0">
-                    <h5 class="font-medium">Hasta 2 horas</h5>
-                    <p class="text-gray-400 text-sm">Problemas simples</p>
-                    <div class="price-tag mt-2 admin-visible">Incluido</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="4h" data-price="15000">
-                    <h5 class="font-medium">2-4 horas</h5>
-                    <p class="text-gray-400 text-sm">Problemas complejos</p>
-                    <div class="price-tag mt-2 admin-visible">+$15.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="full" data-price="30000">
-                    <h5 class="font-medium">Día completo</h5>
-                    <p class="text-gray-400 text-sm">Soluciones integrales</p>
-                    <div class="price-tag mt-2 admin-visible">+$30.000 CLP</div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Maintenance Options -->
-              <div id="maintenance-options" class="options-panel bg-gray-800 rounded-xl p-6 mb-6 hidden">
-                <h4 class="text-lg font-semibold mb-4">Tipo de mantención</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="basic" data-price="18000">
-                    <h5 class="font-medium">Básica</h5>
-                    <p class="text-gray-400 text-sm">Optimización y limpieza</p>
-                    <div class="price-tag mt-2 admin-visible">$18.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="standard" data-price="28000">
-                    <h5 class="font-medium">Estándar</h5>
-                    <p class="text-gray-400 text-sm">Incluye actualización de software</p>
-                    <div class="price-tag mt-2 admin-visible">$28.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="premium" data-price="38000">
-                    <h5 class="font-medium">Premium</h5>
-                    <p class="text-gray-400 text-sm">Optimización completa del sistema</p>
-                    <div class="price-tag mt-2 admin-visible">$38.000 CLP</div>
-                  </div>
-                </div>
-                
-                <h4 class="text-lg font-semibold mb-4">Frecuencia</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="once" data-price="0">
-                    <h5 class="font-medium">Una vez</h5>
-                    <p class="text-gray-400 text-sm">Servicio único</p>
-                    <div class="price-tag mt-2 admin-visible">Precio base</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="monthly" data-price="-3000">
-                    <h5 class="font-medium">Mensual</h5>
-                    <p class="text-gray-400 text-sm">Plan de mantención mensual</p>
-                    <div class="price-tag mt-2 admin-visible">-$3.000 CLP/mes</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="quarterly" data-price="-2000">
-                    <h5 class="font-medium">Trimestral</h5>
-                    <p class="text-gray-400 text-sm">Mantención cada 3 meses</p>
-                    <div class="price-tag mt-2 admin-visible">-$2.000 CLP/servicio</div>
-                  </div>
-                </div>
-              </div>
-              
-              <!-- Software Installation Options -->
-              <div id="software-options" class="options-panel bg-gray-800 rounded-xl p-6 mb-6 hidden">
-                <h4 class="text-lg font-semibold mb-4">Tipo de instalación</h4>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="software" data-price="20000">
-                    <h5 class="font-medium">Software Específico</h5>
-                    <p class="text-gray-400 text-sm">Instalación y configuración de programas</p>
-                    <div class="price-tag mt-2 admin-visible">$20.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="os" data-price="35000">
-                    <h5 class="font-medium">Sistema Operativo</h5>
-                    <p class="text-gray-400 text-sm">Instalación limpia de SO</p>
-                    <div class="price-tag mt-2 admin-visible">$35.000 CLP</div>
-                  </div>
-                </div>
-                
-                <h4 class="text-lg font-semibold mb-4">Servicios adicionales</h4>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="backup" data-price="10000">
-                    <h5 class="font-medium">Respaldo de datos</h5>
-                    <p class="text-gray-400 text-sm">Respaldo completo de información</p>
-                    <div class="price-tag mt-2 admin-visible">+$10.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="drivers" data-price="8000">
-                    <h5 class="font-medium">Drivers específicos</h5>
-                    <p class="text-gray-400 text-sm">Búsqueda e instalación de controladores</p>
-                    <div class="price-tag mt-2 admin-visible">+$8.000 CLP</div>
-                  </div>
-                  <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="migration" data-price="15000">
-                    <h5 class="font-medium">Migración de datos</h5>
-                    <p class="text-gray-400 text-sm">Transferencia de información</p>
-                    <div class="price-tag mt-2 admin-visible">+$15.000 CLP</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="flex justify-end">
-                <button id="continue-to-step3" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-md button-tech">
-                  Continuar
-                </button>
-              </div>
-            </div>
-            
-            <div id="quote-summary-panel" class="bg-gray-800 rounded-xl p-6 h-fit">
-              <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Resumen</h4>
-              <div id="options-summary" class="mb-4">
-                <div class="flex justify-between items-center mb-2">
-                  <span class="text-gray-300">Servicio base:</span>
-                  <span id="base-service-name">-</span>
-                </div>
-                <div class="flex justify-between items-center mb-2">
-                  <span class="text-gray-300">Precio base:</span>
-                  <span id="base-price">-</span>
-                </div>
-                <div id="options-list" class="pt-2 border-t border-gray-700">
-                  <!-- Options will be added here dynamically -->
-                </div>
-              </div>
-              <div class="border-t border-gray-700 pt-3 mt-3">
-                <div class="flex justify-between items-center font-bold">
-                  <span>Total:</span>
-                  <span id="total-price" class="text-blue-400">$0 CLP</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 3: Quote Summary -->
-        <div id="step3" class="wizard-section">
-          <div class="flex justify-between items-center mb-6">
-            <h3 class="text-2xl font-bold text-white">Cotización Final</h3>
-            <button id="back-to-step2" class="text-blue-400 hover:text-blue-300">
-              <i class="fas fa-arrow-left mr-1"></i> Volver
-            </button>
-          </div>
-          
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <div class="lg:col-span-2">
-              <div class="bg-gray-800 rounded-xl p-6 quote-summary">
-                <div id="quote-loading" class="text-center p-6">
-                  <div class="loading-spinner mx-auto mb-4"></div>
-                  <p>Generando cotización...</p>
-                </div>
-                
-                <div id="quote-ready" class="hidden">
-                  <div class="flex justify-between items-center mb-6">
-                    <div>
-                      <h4 class="text-xl font-bold logo-font">
-                        <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span class="text-xs align-top">.cl</span>
-                      </h4>
-                      <p class="text-gray-400 text-sm">Cotización generada: <span id="quote-date"></span></p>
-                    </div>
-                    <div class="bg-blue-900 text-white px-3 py-1 rounded text-sm">
-                      Cotización #<span id="quote-number">DT-2025-01</span>
-                    </div>
-                  </div>
-                  
-                  <div class="mb-6">
-                    <h5 class="font-semibold mb-2 text-blue-400">DETALLE DEL SERVICIO</h5>
-                    <button id="edit-quote-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Editar Cotización</button>
-                    <div id="final-quote-details" class="bg-gray-700 rounded-lg p-4">
-                      <!-- Quote details go here -->
-                    </div>
-                  </div>
-                  
-                  <div class="mb-6">
-                    <h5 class="font-semibold mb-2 text-blue-400">TOTAL</h5>
-                    <div class="bg-gray-700 rounded-lg p-4 flex justify-between items-center">
-                      <span class="font-bold">Total a pagar:</span>
-                      <span id="final-quote-total" class="font-bold text-xl text-white">$0 CLP</span>
-                    </div>
-                  </div>
-                  
-                  <div class="text-sm text-gray-400 mb-6">
-                    <p>Esta cotización es válida por 15 días a partir de la fecha de emisión.</p>
-                    <p>Todos los precios incluyen IVA.</p>
-                  </div>
-                  
-                  <div class="flex flex-wrap justify-between items-center">
-                    <button id="download-quote" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium shadow-md button-tech mb-2 sm:mb-0">
-                      <i class="fas fa-download mr-2"></i> Descargar PDF
-                    </button>
-                    <button id="send-whatsapp" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium shadow-md button-tech">
-                      <i class="fab fa-whatsapp mr-2"></i> Enviar por WhatsApp
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="bg-gray-800 rounded-xl p-6">
-              <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Información Adicional</h4>
-              <div class="space-y-4">
-                <div>
-                  <h5 class="font-medium text-blue-400 mb-1">
-                    <i class="fas fa-clock mr-2"></i> Tiempos de respuesta
-                  </h5>
-                  <p class="text-gray-300 text-sm">
-                    Nos comprometemos a responder en el menor tiempo posible según el nivel de prioridad seleccionado.
-                  </p>
-                </div>
-                <div>
-                  <h5 class="font-medium text-blue-400 mb-1">
-                    <i class="fas fa-shield-alt mr-2"></i> Garantía
-                  </h5>
-                  <p class="text-gray-300 text-sm">
-                    Todos nuestros servicios cuentan con 30 días de garantía. Si el problema persiste, lo solucionamos sin costo adicional.
-                  </p>
-                </div>
-                <div>
-                  <h5 class="font-medium text-blue-400 mb-1">
-                    <i class="fas fa-credit-card mr-2"></i> Formas de pago
-                  </h5>
-                  <p class="text-gray-300 text-sm">
-                    Aceptamos efectivo, transferencias bancarias, tarjetas de crédito/débito, y pago por aplicaciones móviles.
-                  </p>
-                </div>
-              </div>
-              
-              <div class="mt-6 pt-4 border-t border-gray-700">
-                <button id="new-quote" class="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium shadow-md button-tech">
-                  <i class="fas fa-redo mr-2"></i> Nueva Cotización
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
-
-<section class="mt-10 bg-gradient-to-r from-blue-800 to-blue-700 rounded-xl p-8 shadow-lg tech-border">
-  <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Servicios <span class="text-cyan-400">Web</span></h2>
-  
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-    <!-- Web Corporativa -->
-    <div class="service-card card-glow bg-gray-800 rounded-xl p-6">
-      <div class="text-blue-500 text-4xl mb-4">
-        <i class="fas fa-building"></i>
-      </div>
-      <h4 class="text-xl font-bold mb-2">Web Corporativa</h4>
-      <p class="text-gray-400 mb-4">Sitio web profesional para tu empresa</p>
-      <a href="pages/web_corporativa.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-block">Ver más</a>
-    </div>
-
-    <!-- Tienda Online -->
-    <div class="service-card card-glow bg-gray-800 rounded-xl p-6">
-      <div class="text-blue-500 text-4xl mb-4">
-        <i class="fas fa-shopping-cart"></i>
-      </div>
-      <h4 class="text-xl font-bold mb-2">Tienda Online</h4>
-      <p class="text-gray-400 mb-4">Vende tus productos en línea</p>
-      <a href="pages/tienda_online.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-block">Ver más</a>
-    </div>
-
-    <!-- One Page -->
-    <div class="service-card card-glow bg-gray-800 rounded-xl p-6">
-      <div class="text-blue-500 text-4xl mb-4">
-        <i class="fas fa-file"></i>
-      </div>
-      <h4 class="text-xl font-bold mb-2">One Page</h4>
-      <p class="text-gray-400 mb-4">Sitio web de una página</p>
-      <a href="pages/one_page.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-block">Ver más</a>
-    </div>
-
-    <!-- Landing Page -->
-    <div class="service-card card-glow bg-gray-800 rounded-xl p-6">
-      <div class="text-blue-500 text-4xl mb-4">
-        <i class="fas fa-rocket"></i>
-      </div>
-      <h4 class="text-xl font-bold mb-2">Landing Page</h4>
-      <p class="text-gray-400 mb-4">Página de aterrizaje para campañas</p>
-      <a href="pages/landing_page.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg inline-block">Ver más</a>
-    </div>
-  </div>
-</section>
-        <!-- Nueva sección de ventas de páginas web -->
-        <section class="mt-10 bg-gradient-to-r from-purple-800 to-purple-700 rounded-xl p-8 shadow-lg tech-border">
-          <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Ventas de <span class="text-cyan-400">Páginas Web</span></h2>
+      <section class="mb-10">
+        <div class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-8 mb-10 shadow-lg tech-border">
+          <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Soporte Técnico <span
+              class="text-cyan-400">Profesional</span></h2>
           <p class="text-gray-300 text-lg mb-6">
-            Ofrecemos servicios completos para la creación de sitios web modernos, responsivos y optimizados para tu negocio. Desde páginas corporativas hasta tiendas en línea, adaptamos la solución a tus necesidades.
+            Ofrecemos soluciones integrales para todas tus necesidades tecnológicas, tanto para empresas como para
+            hogares.
+            Nuestro equipo de expertos está disponible para ayudarte de manera remota o presencial.
           </p>
-          <a href="pages/ventas_paginas_web.html" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Más Información</a>
-        </section>
+          <button id="start-quote"
+            class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-md button-tech">
+            Cotizar Servicio
+          </button>
 
+          <!-- Nueva sección de ventas de páginas web -->
+          <section class="mt-10 ">
+            <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Ventas de <span
+                class="text-purple-400 hover:text-purple-800">Páginas Web</span></h2>
+            <p class="text-gray-300 text-lg mb-6">
+              Ofrecemos servicios completos para la creación de sitios web modernos, responsivos y optimizados para tu
+              negocio. Desde páginas corporativas hasta tiendas en línea, adaptamos la solución a tus necesidades.
+            </p>
+            <a href="pages/ventas_paginas_web.html"
+              class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-md button-tech">Más
+              Información</a>
+          </section>
+        </div>
 
-        
-         
-      </div>
+        <div id="quote-wizard" class="bg-gray-900 rounded-xl p-6 shadow-lg hidden">
+          <!-- Steps indicator -->
+          <div class="flex items-center mb-8">
+            <div class="step active-step flex items-center">
+              <div class="step-indicator">1</div>
+              <span class="text-sm font-medium mr-4">Seleccionar Servicio</span>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step flex items-center">
+              <div class="step-indicator">2</div>
+              <span class="text-sm font-medium mr-4">Opciones</span>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step flex items-center">
+              <div class="step-indicator">3</div>
+              <span class="text-sm font-medium">Cotización</span>
+            </div>
 
-      
+          </div>
+
+          <!-- Step 1: Service Selection -->
+          <div id="step1" class="wizard-section active">
+            <h3 class="text-2xl font-bold mb-6 text-white">Selecciona un Servicio</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Remote Support -->
+              <div class="service-card card-glow bg-gray-800 rounded-xl p-6 cursor-pointer" data-service="remote">
+                <div class="text-blue-500 text-4xl mb-4">
+                  <i class="fas fa-laptop-code"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Soporte Remoto</h4>
+                <p class="text-gray-400 mb-4">Solución rápida a distancia mediante conexión segura a tu equipo</p>
+                <div class="price-tag inline-block admin-visible">
+                  Desde $15.000 CLP
+                </div>
+              </div>
+
+              <!-- On-site Support -->
+              <div class="service-card card-glow bg-gray-800 rounded-xl p-6 cursor-pointer" data-service="onsite">
+                <div class="text-blue-500 text-4xl mb-4">
+                  <i class="fas fa-tools"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Soporte Presencial</h4>
+                <p class="text-gray-400 mb-4">Técnicos en tu hogar u oficina para resolver problemas en persona</p>
+                <div class="price-tag inline-block admin-visible">
+                  Desde $25.000 CLP
+                </div>
+              </div>
+
+              <!-- Maintenance -->
+              <div class="service-card card-glow bg-gray-800 rounded-xl p-6 cursor-pointer" data-service="maintenance">
+                <div class="text-blue-500 text-4xl mb-4">
+                  <i class="fas fa-sync-alt"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Mantención y Actualización</h4>
+                <p class="text-gray-400 mb-4">Mantén tu equipo optimizado y actualizado con las últimas versiones</p>
+                <div class="price-tag inline-block admin-visible">
+                  Desde $18.000 CLP
+                </div>
+              </div>
+
+              <!-- Software Installation -->
+              <div class="service-card card-glow bg-gray-800 rounded-xl p-6 cursor-pointer" data-service="software">
+                <div class="text-blue-500 text-4xl mb-4">
+                  <i class="fas fa-download"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">Instalación Software/OS</h4>
+                <p class="text-gray-400 mb-4">Instalación profesional de sistemas operativos y programas</p>
+                <div class="price-tag inline-block admin-visible">
+                  Desde $20.000 CLP
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Options & Add-ons -->
+          <div id="step2" class="wizard-section">
+            <div class="flex justify-between items-center mb-6">
+              <h3 class="text-2xl font-bold text-white">Opciones para <span id="service-name">Servicio</span></h3>
+              <button id="back-to-step1" class="text-blue-400 hover:text-blue-300">
+                <i class="fas fa-arrow-left mr-1"></i> Volver
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2">
+                <!-- Remote Support Options -->
+                <div id="remote-options" class="options-panel bg-gray-800 rounded-xl p-6 mb-6 hidden">
+                  <h4 class="text-lg font-semibold mb-4">Duración del servicio</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="1"
+                      data-price="15000">
+                      <h5 class="font-medium">1 Hora</h5>
+                      <p class="text-gray-400 text-sm">Solución rápida de problemas</p>
+                      <div class="price-tag mt-2 admin-visible">$15.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="2"
+                      data-price="25000">
+                      <h5 class="font-medium">2 Horas</h5>
+                      <p class="text-gray-400 text-sm">Problemas de complejidad media</p>
+                      <div class="price-tag mt-2 admin-visible">$25.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="3"
+                      data-price="35000">
+                      <h5 class="font-medium">3+ Horas</h5>
+                      <p class="text-gray-400 text-sm">Problemas complejos</p>
+                      <div class="price-tag mt-2 admin-visible">$35.000 CLP</div>
+                    </div>
+                  </div>
+
+                  <h4 class="text-lg font-semibold mb-4">Prioridad</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="standard"
+                      data-price="0">
+                      <h5 class="font-medium">Estándar</h5>
+                      <p class="text-gray-400 text-sm">Respuesta en 24-48 horas</p>
+                      <div class="price-tag mt-2 admin-visible">Incluido</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="priority"
+                      data-price="10000">
+                      <h5 class="font-medium">Prioritario</h5>
+                      <p class="text-gray-400 text-sm">Respuesta en 12 horas</p>
+                      <div class="price-tag mt-2 admin-visible">+$10.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="urgent"
+                      data-price="20000">
+                      <h5 class="font-medium">Urgente</h5>
+                      <p class="text-gray-400 text-sm">Respuesta en 4 horas</p>
+                      <div class="price-tag mt-2 admin-visible">+$20.000 CLP</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- On-site Support Options -->
+                <div id="onsite-options" class="options-panel bg-gray-800 rounded-xl p-6 mb-6 hidden">
+                  <h4 class="text-lg font-semibold mb-4">Tipo de visita</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="regular"
+                      data-price="25000">
+                      <h5 class="font-medium">Visita Regular</h5>
+                      <p class="text-gray-400 text-sm">Programada con anticipación</p>
+                      <div class="price-tag mt-2 admin-visible">$25.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="same-day"
+                      data-price="40000">
+                      <h5 class="font-medium">Mismo Día</h5>
+                      <p class="text-gray-400 text-sm">Técnico en tu ubicación hoy mismo</p>
+                      <div class="price-tag mt-2 admin-visible">$40.000 CLP</div>
+                    </div>
+                  </div>
+
+                  <h4 class="text-lg font-semibold mb-4">Horas de servicio</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="2h" data-price="0">
+                      <h5 class="font-medium">Hasta 2 horas</h5>
+                      <p class="text-gray-400 text-sm">Problemas simples</p>
+                      <div class="price-tag mt-2 admin-visible">Incluido</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="4h"
+                      data-price="15000">
+                      <h5 class="font-medium">2-4 horas</h5>
+                      <p class="text-gray-400 text-sm">Problemas complejos</p>
+                      <div class="price-tag mt-2 admin-visible">+$15.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="full"
+                      data-price="30000">
+                      <h5 class="font-medium">Día completo</h5>
+                      <p class="text-gray-400 text-sm">Soluciones integrales</p>
+                      <div class="price-tag mt-2 admin-visible">+$30.000 CLP</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Maintenance Options -->
+                <div id="maintenance-options" class="options-panel bg-gray-800 rounded-xl p-6 mb-6 hidden">
+                  <h4 class="text-lg font-semibold mb-4">Tipo de mantención</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="basic"
+                      data-price="18000">
+                      <h5 class="font-medium">Básica</h5>
+                      <p class="text-gray-400 text-sm">Optimización y limpieza</p>
+                      <div class="price-tag mt-2 admin-visible">$18.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="standard"
+                      data-price="28000">
+                      <h5 class="font-medium">Estándar</h5>
+                      <p class="text-gray-400 text-sm">Incluye actualización de software</p>
+                      <div class="price-tag mt-2 admin-visible">$28.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="premium"
+                      data-price="38000">
+                      <h5 class="font-medium">Premium</h5>
+                      <p class="text-gray-400 text-sm">Optimización completa del sistema</p>
+                      <div class="price-tag mt-2 admin-visible">$38.000 CLP</div>
+                    </div>
+                  </div>
+
+                  <h4 class="text-lg font-semibold mb-4">Frecuencia</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="once" data-price="0">
+                      <h5 class="font-medium">Una vez</h5>
+                      <p class="text-gray-400 text-sm">Servicio único</p>
+                      <div class="price-tag mt-2 admin-visible">Precio base</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="monthly"
+                      data-price="-3000">
+                      <h5 class="font-medium">Mensual</h5>
+                      <p class="text-gray-400 text-sm">Plan de mantención mensual</p>
+                      <div class="price-tag mt-2 admin-visible">-$3.000 CLP/mes</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="quarterly"
+                      data-price="-2000">
+                      <h5 class="font-medium">Trimestral</h5>
+                      <p class="text-gray-400 text-sm">Mantención cada 3 meses</p>
+                      <div class="price-tag mt-2 admin-visible">-$2.000 CLP/servicio</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Software Installation Options -->
+                <div id="software-options" class="options-panel bg-gray-800 rounded-xl p-6 mb-6 hidden">
+                  <h4 class="text-lg font-semibold mb-4">Tipo de instalación</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="software"
+                      data-price="20000">
+                      <h5 class="font-medium">Software Específico</h5>
+                      <p class="text-gray-400 text-sm">Instalación y configuración de programas</p>
+                      <div class="price-tag mt-2 admin-visible">$20.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="os"
+                      data-price="35000">
+                      <h5 class="font-medium">Sistema Operativo</h5>
+                      <p class="text-gray-400 text-sm">Instalación limpia de SO</p>
+                      <div class="price-tag mt-2 admin-visible">$35.000 CLP</div>
+                    </div>
+                  </div>
+
+                  <h4 class="text-lg font-semibold mb-4">Servicios adicionales</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="backup"
+                      data-price="10000">
+                      <h5 class="font-medium">Respaldo de datos</h5>
+                      <p class="text-gray-400 text-sm">Respaldo completo de información</p>
+                      <div class="price-tag mt-2 admin-visible">+$10.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="drivers"
+                      data-price="8000">
+                      <h5 class="font-medium">Drivers específicos</h5>
+                      <p class="text-gray-400 text-sm">Búsqueda e instalación de controladores</p>
+                      <div class="price-tag mt-2 admin-visible">+$8.000 CLP</div>
+                    </div>
+                    <div class="option-item bg-gray-700 p-4 rounded-lg cursor-pointer" data-value="migration"
+                      data-price="15000">
+                      <h5 class="font-medium">Migración de datos</h5>
+                      <p class="text-gray-400 text-sm">Transferencia de información</p>
+                      <div class="price-tag mt-2 admin-visible">+$15.000 CLP</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex justify-end">
+                  <button id="continue-to-step3"
+                    class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium shadow-md button-tech">
+                    Continuar
+                  </button>
+                </div>
+              </div>
+
+              <div id="quote-summary-panel" class="bg-gray-800 rounded-xl p-6 h-fit">
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Resumen</h4>
+                <div id="options-summary" class="mb-4">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-gray-300">Servicio base:</span>
+                    <span id="base-service-name">-</span>
+                  </div>
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-gray-300">Precio base:</span>
+                    <span id="base-price">-</span>
+                  </div>
+                  <div id="options-list" class="pt-2 border-t border-gray-700">
+                    <!-- Options will be added here dynamically -->
+                  </div>
+                </div>
+                <div class="border-t border-gray-700 pt-3 mt-3">
+                  <div class="flex justify-between items-center font-bold">
+                    <span>Total:</span>
+                    <span id="total-price" class="text-blue-400">$0 CLP</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Quote Summary -->
+          <div id="step3" class="wizard-section">
+            <div class="flex justify-between items-center mb-6">
+              <h3 class="text-2xl font-bold text-white">Cotización Final</h3>
+              <button id="back-to-step2" class="text-blue-400 hover:text-blue-300">
+                <i class="fas fa-arrow-left mr-1"></i> Volver
+              </button>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2">
+                <div class="bg-gray-800 rounded-xl p-6 quote-summary">
+                  <div id="quote-loading" class="text-center p-6">
+                    <div class="loading-spinner mx-auto mb-4"></div>
+                    <p>Generando cotización...</p>
+                  </div>
+
+                  <div id="quote-ready" class="hidden">
+                    <div class="flex justify-between items-center mb-6">
+                      <div>
+                        <h4 class="text-xl font-bold logo-font">
+                          <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span
+                            class="text-xs align-top">.cl</span>
+                        </h4>
+                        <p class="text-gray-400 text-sm">Cotización generada: <span id="quote-date"></span></p>
+                      </div>
+                      <div class="bg-blue-900 text-white px-3 py-1 rounded text-sm">
+                        Cotización #<span id="quote-number">DT-2025-01</span>
+                      </div>
+                    </div>
+
+                    <div class="mb-6">
+                      <h5 class="font-semibold mb-2 text-blue-400">DETALLE DEL SERVICIO</h5>
+                      <button id="edit-quote-btn"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4">Editar
+                        Cotización</button>
+                      <div id="final-quote-details" class="bg-gray-700 rounded-lg p-4">
+                        <!-- Quote details go here -->
+                      </div>
+                    </div>
+
+                    <div class="mb-6">
+                      <h5 class="font-semibold mb-2 text-blue-400">TOTAL</h5>
+                      <div class="bg-gray-700 rounded-lg p-4 flex justify-between items-center">
+                        <span class="font-bold">Total a pagar:</span>
+                        <span id="final-quote-total" class="font-bold text-xl text-white">$0 CLP</span>
+                      </div>
+                    </div>
+
+                    <div class="text-sm text-gray-400 mb-6">
+                      <p>Esta cotización es válida por 15 días a partir de la fecha de emisión.</p>
+                      <p>Todos los precios incluyen IVA.</p>
+                    </div>
+
+                    <div class="flex flex-wrap justify-between items-center">
+                      <button id="download-quote"
+                        class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium shadow-md button-tech mb-2 sm:mb-0">
+                        <i class="fas fa-download mr-2"></i> Descargar PDF
+                      </button>
+                      <button id="send-whatsapp"
+                        class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg font-medium shadow-md button-tech">
+                        <i class="fab fa-whatsapp mr-2"></i> Enviar por WhatsApp
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-gray-800 rounded-xl p-6">
+                <h4 class="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Información Adicional</h4>
+                <div class="space-y-4">
+                  <div>
+                    <h5 class="font-medium text-blue-400 mb-1">
+                      <i class="fas fa-clock mr-2"></i> Tiempos de respuesta
+                    </h5>
+                    <p class="text-gray-300 text-sm">
+                      Nos comprometemos a responder en el menor tiempo posible según el nivel de prioridad seleccionado.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 class="font-medium text-blue-400 mb-1">
+                      <i class="fas fa-shield-alt mr-2"></i> Garantía
+                    </h5>
+                    <p class="text-gray-300 text-sm">
+                      Todos nuestros servicios cuentan con 30 días de garantía. Si el problema persiste, lo solucionamos
+                      sin costo adicional.
+                    </p>
+                  </div>
+                  <div>
+                    <h5 class="font-medium text-blue-400 mb-1">
+                      <i class="fas fa-credit-card mr-2"></i> Formas de pago
+                    </h5>
+                    <p class="text-gray-300 text-sm">
+                      Aceptamos efectivo, transferencias bancarias, tarjetas de crédito/débito, y pago por aplicaciones
+                      móviles.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-gray-700">
+                  <button id="new-quote"
+                    class="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg font-medium shadow-md button-tech">
+                    <i class="fas fa-redo mr-2"></i> Nueva Cotización
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Edit Quote Modal -->
-      <div id="edit-quote-modal" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden z-50">
+      <div id="edit-quote-modal"
+        class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center hidden z-50">
         <div class="bg-gray-800 p-8 rounded-lg shadow-lg w-11/12 md:w-1/2 lg:w-1/3">
           <h3 class="text-xl font-bold mb-4 text-white">Editar Cotización</h3>
           <div id="modal-options-list" class="mb-4">
             <!-- Options will be loaded here by JavaScript -->
           </div>
           <div class="flex justify-end space-x-4">
-            <button id="save-quote-changes" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Guardar Cambios</button>
-            <button id="close-edit-modal" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Cerrar</button>
+            <button id="save-quote-changes"
+              class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Guardar Cambios</button>
+            <button id="close-edit-modal"
+              class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Cerrar</button>
           </div>
         </div>
       </div>
 
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold mb-6 text-white">Nuestras <span class="text-blue-500">Herramientas</span></h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="bg-gray-800 p-6 rounded-xl text-center card-glow">
-          <img src="https://cdn.pixabay.com/photo/2016/04/08/16/06/binary-1316395_1280.jpg" alt="Diagnóstico Avanzado" class="w-16 h-16 mx-auto mb-4 rounded-full object-cover">
-          <h3 class="font-bold mb-2">Diagnóstico Avanzado</h3>
-          <p class="text-gray-400 text-sm">Herramientas profesionales para detectar problemas</p>
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-6 text-white">Nuestras <span class="text-blue-500">Herramientas</span></h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="bg-gray-800 p-6 rounded-xl text-center card-glow">
+            <img src="https://cdn.pixabay.com/photo/2016/04/08/16/06/binary-1316395_1280.jpg" alt="Diagnóstico Avanzado"
+              class="w-16 h-16 mx-auto mb-4 rounded-full object-cover">
+            <h3 class="font-bold mb-2">Diagnóstico Avanzado</h3>
+            <p class="text-gray-400 text-sm">Herramientas profesionales para detectar problemas</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl text-center card-glow">
+            <img src="https://cdn.pixabay.com/photo/2017/05/10/19/29/robot-2301646_640.jpg" alt="Software Especializado"
+              class="w-16 h-16 mx-auto mb-4 rounded-full object-cover">
+            <h3 class="font-bold mb-2">Software Especializado</h3>
+            <p class="text-gray-400 text-sm">Licencias originales de software profesional</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl text-center card-glow">
+            <img src="https://cdn.pixabay.com/photo/2021/11/04/06/27/artificial-intelligence-6767502_640.jpg"
+              alt="Sistemas de Respaldo" class="w-16 h-16 mx-auto mb-4 rounded-full object-cover">
+            <h3 class="font-bold mb-2">Sistemas de Respaldo</h3>
+            <p class="text-gray-400 text-sm">Protección de datos contra pérdidas</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl text-center card-glow">
+            <img src="https://cdn.pixabay.com/photo/2016/11/19/14/16/man-1839500_640.jpg" alt="Monitoreo Remoto"
+              class="w-16 h-16 mx-auto mb-4 rounded-full object-cover">
+            <h3 class="font-bold mb-2">Monitoreo Remoto</h3>
+            <p class="text-gray-400 text-sm">Supervisión constante del estado de tus equipos</p>
+          </div>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl text-center card-glow">
-          <img src="https://cdn.pixabay.com/photo/2017/05/10/19/29/robot-2301646_640.jpg" alt="Software Especializado" class="w-16 h-16 mx-auto mb-4 rounded-full object-cover">
-          <h3 class="font-bold mb-2">Software Especializado</h3>
-          <p class="text-gray-400 text-sm">Licencias originales de software profesional</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl text-center card-glow">
-          <img src="https://cdn.pixabay.com/photo/2021/11/04/06/27/artificial-intelligence-6767502_640.jpg" alt="Sistemas de Respaldo" class="w-16 h-16 mx-auto mb-4 rounded-full object-cover">
-          <h3 class="font-bold mb-2">Sistemas de Respaldo</h3>
-          <p class="text-gray-400 text-sm">Protección de datos contra pérdidas</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl text-center card-glow">
-          <img src="https://cdn.pixabay.com/photo/2016/11/19/14/16/man-1839500_640.jpg" alt="Monitoreo Remoto" class="w-16 h-16 mx-auto mb-4 rounded-full object-cover">
-          <h3 class="font-bold mb-2">Monitoreo Remoto</h3>
-          <p class="text-gray-400 text-sm">Supervisión constante del estado de tus equipos</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="mb-10">
-      <h2 class="text-2xl font-bold mb-6 text-white">Por qué <span class="text-blue-500">Elegirnos</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-gray-800 p-6 rounded-xl card-glow">
-          <div class="text-blue-500 text-3xl mb-4">
-            <i class="fas fa-user-shield"></i>
+      <section class="mb-10">
+        <h2 class="text-2xl font-bold mb-6 text-white">Por qué <span class="text-blue-500">Elegirnos</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gray-800 p-6 rounded-xl card-glow">
+            <div class="text-blue-500 text-3xl mb-4">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Confianza y Seguridad</h3>
+            <p class="text-gray-400">Todos nuestros técnicos están certificados y cuentan con años de experiencia en el
+              sector.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Confianza y Seguridad</h3>
-          <p class="text-gray-400">Todos nuestros técnicos están certificados y cuentan con años de experiencia en el sector.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl card-glow">
-          <div class="text-blue-500 text-3xl mb-4">
-            <i class="fas fa-bolt"></i>
+          <div class="bg-gray-800 p-6 rounded-xl card-glow">
+            <div class="text-blue-500 text-3xl mb-4">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Respuesta Rápida</h3>
+            <p class="text-gray-400">Entendemos la importancia de tu tiempo y ofrecemos soluciones ágiles sin sacrificar
+              calidad.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Respuesta Rápida</h3>
-          <p class="text-gray-400">Entendemos la importancia de tu tiempo y ofrecemos soluciones ágiles sin sacrificar calidad.</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-xl card-glow">
-          <div class="text-blue-500 text-3xl mb-4">
-            <i class="fas fa-hand-holding-usd"></i>
+          <div class="bg-gray-800 p-6 rounded-xl card-glow">
+            <div class="text-blue-500 text-3xl mb-4">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Precios Transparentes</h3>
+            <p class="text-gray-400">Sin costos ocultos. Te informamos claramente el precio de nuestros servicios antes
+              de empezar.</p>
           </div>
-          <h3 class="text-xl font-bold mb-2">Precios Transparentes</h3>
-          <p class="text-gray-400">Sin costos ocultos. Te informamos claramente el precio de nuestros servicios antes de empezar.</p>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
     <!-- mobile-nav will be injected here by script -->
   </header>
 
-  
+
 
   <footer class="bg-gray-900 py-8 border-t border-gray-800">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h3 class="text-xl font-bold logo-font text-white mb-4">
-            <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span class="text-xs align-top">.cl</span>
+            <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span
+              class="text-xs align-top">.cl</span>
           </h3>
           <p class="text-gray-400 mb-4">Soluciones tecnológicas para empresas y hogares en todo Chile.</p>
           <div class="flex space-x-4">
@@ -624,22 +682,28 @@
         <div>
           <h4 class="text-lg font-semibold text-white mb-4">Servicios</h4>
           <ul class="space-y-2">
-            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte Remoto</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte Presencial</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Mantención y Actualización</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Instalación de Software</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte
+                Remoto</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte
+                Presencial</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Mantención y
+                Actualización</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Instalación de
+                Software</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h4>
           <ul class="space-y-2">
             <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Inicio</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Sobre Nosotros</a></li>
-            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Contacto</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Sobre
+                Nosotros</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Contacto</a>
+            </li>
             <!-- link DaveStore -->
-            <li><a href="https://shop-murex-eight.vercel.app/" class="text-gray-400 hover:text-blue-400 transition-colors">DaveStore 🏪🏬🛍️🛒</a></li>
-            <li><a 
-          </ul>
+            <li><a href="https://shop-murex-eight.vercel.app/"
+                class="text-gray-400 hover:text-blue-400 transition-colors">DaveStore 🏪🏬🛍️🛒</a></li>
+            <li><a </ul>
         </div>
         <div>
           <h4 class="text-lg font-semibold text-white mb-4">Contacto</h4>
@@ -674,10 +738,10 @@
     <i class="fab fa-whatsapp text-white text-3xl"></i>
   </a>
 
-  
+
 
   <!-- Admin Modal (hidden by default) -->
-  <div id="admin-modal" class="flex">  <!-- was hidden below footer, now flex and display:none -->
+  <div id="admin-modal" class="flex"> <!-- was hidden below footer, now flex and display:none -->
     <div class="bg-gray-800 text-white w-full max-w-3xl p-6 rounded-lg mx-4 relative tech-border">
       <button id="admin-close" class="absolute top-2 right-2 text-gray-400 hover:text-white">
         &times;
@@ -686,8 +750,8 @@
       <!-- LOGIN SCREEN -->
       <div id="admin-login">
         <h2 class="text-2xl font-semibold mb-4">Admin Login</h2>
-        <input id="admin-pass" type="password" placeholder="Contraseña" 
-               class="w-full p-2 mb-4 rounded bg-gray-700 focus:outline-none"/>
+        <input id="admin-pass" type="password" placeholder="Contraseña"
+          class="w-full p-2 mb-4 rounded bg-gray-700 focus:outline-none" />
         <p id="login-error" class="text-red-400 mb-4 hidden">Contraseña incorrecta</p>
         <button id="btn-login" class="w-full bg-blue-500 hover:bg-blue-600 p-2 rounded">
           Entrar
@@ -705,9 +769,10 @@
       </div>
     </div>
   </div>
-
-  
-  
   <script src="./js/script.js"></script>
+  <!-- CDN BOOSTRAP -->
+  <script src="URL_ADDRESS.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
+

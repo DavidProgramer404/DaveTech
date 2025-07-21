@@ -11,8 +11,9 @@
   <script src="../js/script.js"></script>
   <script src="./js/menu.js"></script>
   <script src="./js/ham.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-900 text-white">
+<body class="bg-azul-oscuro-profundo text-blanco-profesional">
   <header class="bg-tech tech-border py-4">
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div>
@@ -21,7 +22,7 @@
         </h1>
         <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
       </div>
-      <nav class="hidden md:flex space-x-6 text-gray-300">
+      <nav id="navbar-nav" class="hidden md:flex space-x-6 text-gray-300">
         <a href="../index.html" class="hover:text-white">Inicio</a>
         <div class="relative group">
           <button class="hover:text-white focus:outline-none flex items-center">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
@@ -39,10 +40,29 @@
         <span class="user-info hidden text-white"></span>
         <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
       </nav>
-      <button class="md:hidden text-white">
+      <button id="mobile-toggle" class="md:hidden text-white" aria-expanded="false" aria-label="Abrir menú">
         <i class="fas fa-bars text-xl"></i>
       </button>
     </div>
+    <!-- Menú móvil -->
+    <nav id="mobile-menu" class="md:hidden hidden flex-col bg-gray-800 absolute w-full left-0 top-20 z-50 p-4 rounded-b-lg">
+      <a href="../index.html" class="block py-2 px-4 text-gray-300 hover:bg-blue-600 hover:text-white">Inicio</a>
+      <div class="relative">
+        <button id="mobile-services-toggle" class="w-full flex items-center justify-between py-2 px-4 text-gray-300 hover:bg-blue-600 hover:text-white focus:outline-none">Servicios <i class="fas fa-chevron-down ml-2 text-xs"></i></button>
+        <div id="mobile-services-menu" class="hidden flex-col bg-gray-700 rounded-lg mt-2">
+          <a href="web_corporativa.html" class="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white">Web Corporativa</a>
+          <a href="tienda_online.html" class="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white">Tienda Online</a>
+          <a href="one_page.html" class="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white">One Page</a>
+          <a href="landing_page.html" class="block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white">Landing Page</a>
+        </div>
+      </div>
+      <a href="nosotros.html" class="block py-2 px-4 text-gray-300 hover:bg-blue-600 hover:text-white">Nosotros</a>
+      <a href="../admin/login.html" class="block py-2 px-4 text-gray-300 hover:bg-blue-600 hover:text-white">Admin</a>
+      <a href="#" class="block py-2 px-4 text-gray-300 hover:bg-blue-600 hover:text-white">Contacto</a>
+      <a href="../users/login.html" class="block py-2 px-4 text-gray-300 hover:bg-blue-600 hover:text-white login-button">Login</a>
+      <span class="user-info hidden text-white"></span>
+      <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+    </nav>
   </header>
   <main class="container mx-auto px-4 py-12">
     <section class="bg-gradient-to-r from-pink-800 to-pink-700 rounded-xl p-8 shadow-lg tech-border mb-10">
@@ -59,7 +79,7 @@
       <a href="https://wa.me/56912345678?text=Quiero%20una%20Landing%20Page" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Solicitar Cotización</a>
     </section>
   </main>
-  <footer class="bg-gray-800 py-6 mt-10">
+  <footer class="bg-azul-oscuro-profundo text-blanco-profesional">
     <div class="container mx-auto px-4 text-center text-gray-400">
       &copy; 2024 DaveTech.cl - Todos los derechos reservados
     </div>

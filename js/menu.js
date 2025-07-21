@@ -1,42 +1,54 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // --- Funcionalidad del Dropdown "Servicios" ---
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const dropdownMenu = document.querySelector('.dropdown-menu');
+// Mobile menu functionality
+const mobileToggle = document.getElementById('mobile-toggle');
+const navbarNav = document.getElementById('navbar-nav');
+const mobileServicesToggle = document.getElementById('mobile-services-toggle');
+const mobileServicesMenu = document.getElementById('mobile-services-menu');
+const mobileMenuActiveClass = 'mobile-menu-open'; // Clase para mostrar el menú
 
-    if (dropdownToggle && dropdownMenu) {
-        dropdownToggle.addEventListener('click', function() {
-            dropdownMenu.classList.toggle('hidden');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
-            this.setAttribute('aria-expanded', !isExpanded);
-        });
+if (mobileToggle && navbarNav) {
+  mobileToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !isExpanded);
+    navbarNav.classList.toggle(mobileMenuActiveClass);
+  });
 
-        // Cierra el dropdown si se hace clic fuera de él
-        document.addEventListener('click', function(event) {
-            if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.add('hidden');
-                dropdownToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navbarNav.contains(e.target) && !mobileToggle.contains(e.target) && navbarNav.classList.contains(mobileMenuActiveClass)) {
+      navbarNav.classList.remove(mobileMenuActiveClass);
+      mobileToggle.setAttribute('aria-expanded', 'false');
     }
+  });
+}
 
-    // --- Funcionalidad del Menú Móvil (Botón de Hamburguesa) ---
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const navbarMain = document.getElementById('navbar-main');
+if (mobileServicesToggle && mobileServicesMenu) {
+  mobileServicesToggle.addEventListener('click', function (e) {
+    e.stopPropagation();
+    mobileServicesMenu.classList.toggle('hidden');
+  });
 
-    if (mobileToggle && navbarMain) {
-        mobileToggle.addEventListener('click', function() {
-            // Alterna la clase 'hidden' para mostrar/ocultar la navegación principal
-            navbarMain.classList.toggle('hidden');
-
-            // En pantallas móviles, queremos que el menú se muestre como un bloque y no como flex horizontal
-            // Tailwind ya tiene `md:flex` y `hidden` en el nav,
-            // pero si necesitas más control para sobrescribir en móvil:
-            // navbarMain.classList.toggle('flex-col'); // Si no usaste flex-col en el HTML del nav
-            // navbarMain.classList.toggle('absolute'); // Podrías querer que sea absoluto para cubrir contenido
-
-            // Alterna el atributo aria-expanded para accesibilidad
-            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
-            this.setAttribute('aria-expanded', !isExpanded);
-        });
+  // Cerrar submenú servicios al hacer clic fuera
+  document.addEventListener('click', (e) => {
+    if (!mobileServicesMenu.contains(e.target) && !mobileServicesToggle.contains(e.target)) {
+      mobileServicesMenu.classList.add('hidden');
     }
-});
+  });
+}
+
+// Mostrar/ocultar menú desplegable móvil en index.html
+const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
+const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
+
+if (mobileDropdownToggle && mobileDropdownMenu) {
+  mobileDropdownToggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    mobileDropdownMenu.classList.toggle('hidden');
+  });
+  // Cerrar menú al hacer clic fuera
+  document.addEventListener('click', function(e) {
+    if (!mobileDropdownMenu.contains(e.target) && !mobileDropdownToggle.contains(e.target)) {
+      mobileDropdownMenu.classList.add('hidden');
+    }
+  });
+}

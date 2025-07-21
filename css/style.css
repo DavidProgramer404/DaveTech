@@ -5,23 +5,98 @@
   --accent: #00ffaa;
   --dark: #111827;
   --light: #f8fafc;
+  --azul-oscuro-profundo: #08121e;
+  --azul-oscuro: #0a1825;
+  --azul-negro: #07111d;
+  --azul-oscuro-grisaceo: #08121c;
+  --azul-oscuro-intenso: #081420;
+  --azul-oscuro-matiz-gris: #091928;
+  --casi-negro-azulado: #080e1a;
+  --azul-oscuro-tinte-gris: #071522;
+  --negro-azulado: #07111b;
+  --azul-profundo: #0a1a29;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--dark);
+  background-color: var(--azul-oscuro-profundo);
   color: var(--light);
   position: relative;
   min-height: 100vh;
 }
 
+.bg-tech {
+  background: linear-gradient(135deg, var(--azul-oscuro-intenso) 0%, var(--azul-oscuro-matiz-gris) 100%);
+}
+
+.tech-border {
+  border-color: var(--azul-oscuro) !important;
+}
+
+.navbar-dark {
+  background-color: var(--azul-oscuro-grisaceo);
+}
+
+.dropdown-menu-dark {
+  background-color: var(--azul-oscuro-tinte-gris);
+  border: 1px solid var(--primary);
+}
+
+.card-glow {
+  border: 1px solid var(--azul-profundo);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 15px var(--azul-oscuro-intenso);
+  border: 1px solid var(--azul-oscuro-intenso);
+}
+
+.button-tech {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-oscuro-intenso));
+  color: var(--light);
+}
+
+/* Utilidades para aplicar los colores en clases personalizadas */
+.bg-azul-oscuro-profundo { background-color: var(--azul-oscuro-profundo) !important; }
+.bg-azul-oscuro { background-color: var(--azul-oscuro) !important; }
+.bg-azul-negro { background-color: var(--azul-negro) !important; }
+.bg-azul-oscuro-grisaceo { background-color: var(--azul-oscuro-grisaceo) !important; }
+.bg-azul-oscuro-intenso { background-color: var(--azul-oscuro-intenso) !important; }
+.bg-azul-oscuro-matiz-gris { background-color: var(--azul-oscuro-matiz-gris) !important; }
+.bg-casi-negro-azulado { background-color: var(--casi-negro-azulado) !important; }
+.bg-azul-oscuro-tinte-gris { background-color: var(--azul-oscuro-tinte-gris) !important; }
+.bg-negro-azulado { background-color: var(--negro-azulado) !important; }
+.bg-azul-profundo { background-color: var(--azul-profundo) !important; }
+
+.text-azul-oscuro-profundo { color: var(--azul-oscuro-profundo) !important; }
+.text-azul-oscuro { color: var(--azul-oscuro) !important; }
+.text-azul-negro { color: var(--azul-negro) !important; }
+.text-azul-oscuro-grisaceo { color: var(--azul-oscuro-grisaceo) !important; }
+.text-azul-oscuro-intenso { color: var(--azul-oscuro-intenso) !important; }
+.text-azul-oscuro-matiz-gris { color: var(--azul-oscuro-matiz-gris) !important; }
+.text-casi-negro-azulado { color: var(--casi-negro-azulado) !important; }
+.text-azul-oscuro-tinte-gris { color: var(--azul-oscuro-tinte-gris) !important; }
+.text-negro-azulado { color: var(--negro-azulado) !important; }
+.text-azul-profundo { color: var(--azul-profundo) !important; }
+
 .logo-font {
   font-family: 'Orbitron', sans-serif;
+}
+
+
+#navbar-main.show {
+    display: block; /* Mostrar cuando la clase 'show' esté presente */
+} */
+
+/* Con Tailwind CSS, puedes aprovechar la clase 'hidden' */
+#navbar-main.show {
+    display: block !important; /* O cambiar a 'flex' o 'grid' según tu diseño */
 }
 
 .navbar-dark {
   background-color: transparent;
 }
+
 
 .navbar-dark .navbar-nav .nav-link {
   color: var(--light);
