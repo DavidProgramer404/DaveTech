@@ -1,0 +1,168 @@
+/* Optimizaciones de rendimiento y accesibilidad */
+
+/* Mejoras de accesibilidad */
+:focus {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1a202c;
+  color: white;
+  padding: 1rem;
+  z-index: 9999;
+  text-decoration: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+/* Alto contraste para texto */
+.text-high-contrast {
+  color: #f8f9fa;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Mejoras de legibilidad */
+body {
+  line-height: 1.6;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimizaciones de rendimiento */
+/* Reduce paint operations */
+.optimize-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Animaciones optimizadas */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+  will-change: opacity;
+}
+
+/* Mejoras de interactividad */
+.button-tech {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.button-tech::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.button-tech:hover::after {
+  width: 300%;
+  height: 300%;
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 768px) {
+  .button-tech {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Mejoras de accesibilidad para formularios */
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+/* Indicadores de estado para enlaces y botones */
+a:hover,
+button:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+/* Mejoras de contraste para texto sobre fondos oscuros */
+.dark-bg {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* Optimizaciones para imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Loading states */
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid rgba(37, 99, 235, 0.3);
+  border-radius: 50%;
+  border-top-color: #2563eb;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Mejoras de accesibilidad para tooltips */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  background: #1a202c;
+  color: white;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+[data-tooltip]:hover::before {
+  opacity: 1;
+  visibility: visible;
+}

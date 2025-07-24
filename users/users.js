@@ -61,32 +61,111 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Verificar si el usuario está logueado
+  // Verificar si el usuario está logueado y actualizar la interfaz
   const checkUserLogin = () => {
     const currentUser = sessionStorage.getItem('currentUser');
-    const userActions = document.querySelectorAll('.user-action');
-    const loginButton = document.querySelector('.login-button');
-    const userInfo = document.querySelector('.user-info');
+    const loginButtons = document.querySelectorAll('.login-button');
+    const userInfos = document.querySelectorAll('.user-info');
+    const logoutButtons = document.querySelectorAll('.logout-button');
+    const dropdownMenus = document.querySelectorAll('.dropdown-menu');
 
     if (currentUser) {
-      userActions.forEach(action => action.classList.remove('hidden'));
-      if (loginButton) loginButton.classList.add('hidden');
-      if (userInfo) {
-        userInfo.textContent = `Bienvenido, ${currentUser}`;
-        userInfo.classList.remove('hidden');
-      }
+      // Ocultar botones de login y mostrar información de usuario
+      loginButtons.forEach(button => {
+        if (!button.closest('.dropdown-menu')) {
+          button.classList.add('hidden');
+        }
+      });
+      userInfos.forEach(info => {
+        info.textContent = `¡Hola, ${currentUser}!`;
+        info.classList.remove('hidden');
+      });
+      logoutButtons.forEach(button => button.classList.remove('hidden'));
+
+      // Ocultar opciones de login en los menús desplegables
+      dropdownMenus.forEach(menu => {
+        const loginItems = menu.querySelectorAll('.login-button');
+        loginItems.forEach(item => item.classList.add('hidden'));
+      });
     } else {
-      userActions.forEach(action => action.classList.add('hidden'));
-      if (loginButton) loginButton.classList.remove('hidden');
-      if (userInfo) userInfo.classList.add('hidden');
+      // Mostrar botones de login y ocultar información de usuario
+      loginButtons.forEach(button => button.classList.remove('hidden'));
+      userInfos.forEach(info => info.classList.add('hidden'));
+      logoutButtons.forEach(button => button.classList.add('hidden'));
+
+      // Mostrar opciones de login en los menús desplegables
+      dropdownMenus.forEach(menu => {
+        const loginItems = menu.querySelectorAll('.login-button');
+        loginItems.forEach(item => item.classList.remove('hidden'));
+      });
     }
   };
 
   // Función para cerrar sesión
   const logout = () => {
     sessionStorage.removeItem('currentUser');
-    window.location.href = 'users/login.html';
+    const currentPath = window.location.pathname;
+    const loginPath = currentPath.includes('/pages/') ? '../users/login.html' : 'users/login.html';
+    window.location.href = loginPath;
   };
+
+  // Configurar dropdowns del menú
+  const setupDropdowns = () => {
+    // Dropdown de servicios desktop
+    const servicesDropdown = document.querySelector('.dropdown-toggle');
+    if (servicesDropdown) {
+      servicesDropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const menu = e.currentTarget.nextElementSibling;
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    // Dropdown de usuario desktop
+    const userDropdown = document.querySelector('.dropdown-toggle:last-of-type');
+    if (userDropdown) {
+      userDropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const menu = e.currentTarget.nextElementSibling;
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    // Dropdowns móviles
+    const mobileServicesBtn = document.getElementById('mobile-services-dropdown-btn');
+    const mobileUserBtn = document.getElementById('mobile-user-dropdown-btn');
+
+    if (mobileServicesBtn) {
+      mobileServicesBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.getElementById('mobile-services-dropdown').classList.toggle('hidden');
+      });
+    }
+
+    if (mobileUserBtn) {
+      mobileUserBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        document.getElementById('mobile-user-dropdown').classList.toggle('hidden');
+      });
+    }
+
+    // Cerrar dropdowns al hacer click fuera
+    document.addEventListener('click', (e) => {
+      const dropdowns = document.querySelectorAll('.dropdown-menu, .mobile-dropdown-menu');
+      if (!e.target.closest('.dropdown') && !e.target.closest('.mobile-dropdown-toggle')) {
+        dropdowns.forEach(menu => menu.classList.add('hidden'));
+      }
+    });
+  };
+
+  // Inicializar funcionalidades
+  checkUserLogin();
+  setupDropdowns();
+
+  // Configurar botones de logout
+  document.querySelectorAll('.logout-button').forEach(button => {
+    button.addEventListener('click', logout);
+  });
 
   // Manejar el envío de cotización a WhatsApp
   const sendToWhatsApp = (quoteDetails) => {
@@ -108,7 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.open(whatsappUrl, '_blank');
   };
 
-  const initQuoteWizard = () => {
+  // Inicializar el asistente de cotización si estamos en la página principal
+  if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
     const startQuoteBtn = document.getElementById('start-quote');
     const quoteWizard = document.getElementById('quote-wizard');
 
@@ -123,18 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
           window.location.href = 'users/login.html';
         }
       });
-    }
-  };
-
-  // Inicializar la verificación de login y el asistente de cotización
-  if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
-    checkUserLogin();
-    initQuoteWizard();
-
-    // Configurar el botón de logout
-    const logoutButton = document.querySelector('.logout-button');
-    if (logoutButton) {
-      logoutButton.addEventListener('click', logout);
     }
 
     // Configurar el botón de envío a WhatsApp

@@ -15,38 +15,74 @@
 <body class="bg-gray-900 text-white">
   <header class="bg-tech tech-border py-4">
     <div class="container mx-auto px-4 flex justify-between items-center">
-      <div>
-        <h1 class="text-3xl font-bold logo-font text-white">
-          <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span class="text-xs align-top">.cl</span>
-        </h1>
-        <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
-      </div>
-      <!-- Navegación principal -->
-      <button id="mobile-toggle" class="md:hidden text-white" aria-controls="navbar-nav" aria-expanded="false" aria-label="Abrir menú">
-    <i class="fas fa-bars text-xl"></i>
-</button>
-
-<nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
-    </nav>
-
-<nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
-    <a href="/" class="hover:text-white">Inicio</a>
-    <div class="dropdown relative">
-        <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false" aria-haspopup="true">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
-        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
-            <a href="pages/web_corporativa.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web Corporativa</a>
-            <a href="pages/tienda_online.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Tienda Online</a>
-            <a href="pages/one_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One Page</a>
-            <a href="pages/landing_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Landing Page</a>
+        <div>
+            <a href="../" class="block">
+                <h1 class="text-3xl font-bold logo-font text-white">
+                    <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span>
+                    <span class="text-xs align-top">.cl</span>
+                </h1>
+                <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
+            </a>
         </div>
+
+        <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+
+        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 hidden">
+            <div class="flex justify-end p-4">
+                <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col items-center space-y-6 text-xl text-gray-300 pt-10">
+                <a href="../" class="hover:text-white">Inicio</a>
+                <div class="relative">
+                    <button id="mobile-services-dropdown-btn" class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center">
+                        Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                    </button>
+                    <div id="mobile-services-dropdown" class="mobile-dropdown-menu hidden mt-2 space-y-2 drop-shadow-2xl">
+                        <a href="web_corporativa.html" class="block text-gray-300 hover:text-white pl-4">Web Corporativa</a>
+                        <a href="tienda_online.html" class="block text-gray-300 hover:text-white pl-4">Tienda Online</a>
+                        <a href="one_page.html" class="block text-gray-300 hover:text-white pl-4">One Page</a>
+                        <a href="landing_page.html" class="block text-gray-300 hover:text-white pl-4">Landing Page</a>
+                    </div>
+                </div>
+                <a href="nosotros.html" class="hover:text-white">Nosotros</a>
+                <a href="/admin/login.html" class="hover:text-white">Admin</a>
+                <a href="contacto.html" class="hover:text-white">Contacto</a>
+                <a href="../users/login.html" class="hover:text-white login-button">Login</a>
+                <span class="user-info hidden text-white"></span>
+                <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+            </nav>
+        </div>
+
+        <nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
+            <a href="../" class="hover:text-white">Inicio</a>
+            <div class="dropdown relative">
+                <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false" aria-haspopup="true">
+                    Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                </button>
+                <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
+                    <a href="web_corporativa.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web Corporativa</a>
+                    <a href="tienda_online.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Tienda Online</a>
+                    <a href="one_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One Page</a>
+                    <a href="landing_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Landing Page</a>
+                </div>
+            </div>
+            <a href="nosotros.html" class="hover:text-white">Nosotros</a>
+            <a href="/admin/login.html" class="hover:text-white">Admin</a>
+            <a href="contacto.html" class="hover:text-white">Contacto</a>
+            <a href="../users/login.html" class="hover:text-white login-button">Login</a>
+            <span class="user-info hidden text-white"></span>
+            <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+        </nav>
     </div>
-    <a href="/pages/nosotros.html" class="hover:text-white">Nosotros</a>
-    <a href="/admin/login.html" class="hover:text-white">Admin</a>
-    <a href="#" class="hover:text-white">Contacto</a>
-    <a href="users/login.html" class="hover:text-white login-button">Login</a>
-    <span class="user-info hidden text-white"></span>
-    <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
-</nav>
+</header>
     </div>
     <main class="container mx-auto px-4 py-12">
     <section class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-8 shadow-lg tech-border mb-10">
@@ -61,7 +97,7 @@
         <li>Integración con redes sociales</li>
         <li>Soporte técnico y capacitación</li>
       </ul>
-      <a href="https://wa.me/56912345678?text=Quiero%20una%20Web%20Corporativa" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Solicitar Cotización</a>
+      <a href="https://wa.me/56999442312?text=Quiero%20una%20Web%20Corporativa" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Solicitar Cotización</a>
     </section>
   </main>
   </header>

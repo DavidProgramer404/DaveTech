@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /users/login
+Disallow: /users/register
+
+Sitemap: https://davetech.cl/sitemap.xml
