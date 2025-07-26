@@ -1,54 +1,28 @@
-// Mobile menu functionality
-const mobileToggle = document.getElementById('mobile-toggle');
-const navbarNav = document.getElementById('navbar-nav');
-const mobileServicesToggle = document.getElementById('mobile-services-toggle');
-const mobileServicesMenu = document.getElementById('mobile-services-menu');
-const mobileMenuActiveClass = 'mobile-menu-open'; // Clase para mostrar el menú
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileServicesDropdownBtn = document.getElementById("mobile-services-dropdown-btn");
+  const mobileServicesDropdown = document.getElementById("mobile-services-dropdown");
+  const mobileUserDropdownBtn = document.getElementById("mobile-user-dropdown-btn");
+  const mobileUserDropdown = document.getElementById("mobile-user-dropdown");
+  const desktopDropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
-if (mobileToggle && navbarNav) {
-  mobileToggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-    this.setAttribute('aria-expanded', !isExpanded);
-    navbarNav.classList.toggle(mobileMenuActiveClass);
-  });
+  // Toggle mobile menu
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener("click", function () {
+      mobileMenu.classList.toggle("hidden");
+      console.log("Mobile menu button clicked. Mobile menu hidden: " + mobileMenu.classList.contains("hidden"));
+    });
 
-  // Close menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!navbarNav.contains(e.target) && !mobileToggle.contains(e.target) && navbarNav.classList.contains(mobileMenuActiveClass)) {
-      navbarNav.classList.remove(mobileMenuActiveClass);
-      mobileToggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-}
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  }
 
-if (mobileServicesToggle && mobileServicesMenu) {
-  mobileServicesToggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    mobileServicesMenu.classList.toggle('hidden');
-  });
+  // La lógica de los dropdowns móviles ahora es manejada por Bootstrap.
 
-  // Cerrar submenú servicios al hacer clic fuera
-  document.addEventListener('click', (e) => {
-    if (!mobileServicesMenu.contains(e.target) && !mobileServicesToggle.contains(e.target)) {
-      mobileServicesMenu.classList.add('hidden');
-    }
-  });
-}
-
-// Mostrar/ocultar menú desplegable móvil en index.html
-const mobileDropdownToggle = document.querySelector('.mobile-dropdown-toggle');
-const mobileDropdownMenu = document.querySelector('.mobile-dropdown-menu');
-
-if (mobileDropdownToggle && mobileDropdownMenu) {
-  mobileDropdownToggle.addEventListener('click', function(e) {
-    e.stopPropagation();
-    mobileDropdownMenu.classList.toggle('hidden');
-  });
-  // Cerrar menú al hacer clic fuera
-  document.addEventListener('click', function(e) {
-    if (!mobileDropdownMenu.contains(e.target) && !mobileDropdownToggle.contains(e.target)) {
-      mobileDropdownMenu.classList.add('hidden');
-    }
-  });
-}
+  // La lógica de los dropdowns de escritorio ahora es manejada por Bootstrap.
+});

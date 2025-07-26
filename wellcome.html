@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenido a DaveTech - Soluciones tecnológicas profesionales">
+    <title>Bienvenido a DaveTech</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #2c3e50, #10182B);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .logo-container {
+            position: relative;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            animation: pulse 3s infinite;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+        }
+
+        .logo-container img {
+            max-width: 500px;
+            height: auto;
+            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(52, 152, 219, 0.6);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            }
+        }
+
+        .loading {
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3498db;
+            animation: loading 1.2s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.4);
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .dot:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes loading {
+            0%, 100% {
+                transform: scale(0.3);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/davetechlogo1.jpg" alt="DaveTech Logo" loading="eager">
+        <div class="loading">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 2500);
+        });
+    </script>
+</body>
+</html>

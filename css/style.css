@@ -88,7 +88,15 @@ body {
     display: block; /* Mostrar cuando la clase 'show' esté presente */
 } */
 
-/* Con Tailwind CSS, puedes aprovechar la clase 'hidden' */
+.hidden {
+  display: none !important;
+}
+
+/* Asegurar que los dropdowns de Bootstrap se muestren correctamente */
+.dropdown-menu.show {
+  display: block !important;
+}
+
 #navbar-main.show {
     display: block !important; /* O cambiar a 'flex' o 'grid' según tu diseño */
 }

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sobre mi - DaveTech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet"
@@ -24,15 +25,15 @@
   <meta property="og:image" content="https://davetech.cl/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nosotros - DaveTech.cl">
-  <meta name="twitter:description"
-    content="Conoce al equipo de DaveTech.cl, expertos en soporte técnico, mantención y soluciones tecnológicas en Chile.">
+  <meta name="twitter:description">
   <meta name="twitter:image" content="https://davetech.cl/img/og-image.png">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <!-- <script src="../js/ham.js"></script> -->
+
   <script src="../js/menu.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/services.js"></script>
   <script src="../users/users.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-azul-oscuro-profundo text-blanco-profesional">
@@ -54,7 +55,7 @@
         </svg>
       </button>
 
-      <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 hidden">
+      <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40">
         <div class="flex justify-end p-4">
           <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -65,10 +66,11 @@
         <nav class="flex flex-col items-center space-y-6 text-xl text-gray-300 pt-10">
           <a href="../" class="hover:text-white">Inicio</a>
           <div class="relative">
-            <button id="mobile-services-dropdown-btn" class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center">
+            <button id="mobile-services-dropdown-btn"
+              class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
             </button>
-            <div id="mobile-services-dropdown" class="mobile-dropdown-menu hidden mt-2 space-y-2 drop-shadow-2xl">
+            <div id="mobile-services-dropdown" class="mobile-dropdown-menu mt-2 space-y-2 drop-shadow-2xl" data-bs-popper="static">
               <a href="web_corporativa.html" class="block text-gray-300 hover:text-white pl-4">Web Corporativa</a>
               <a href="tienda_online.html" class="block text-gray-300 hover:text-white pl-4">Tienda Online</a>
               <a href="one_page.html" class="block text-gray-300 hover:text-white pl-4">One Page</a>
@@ -87,18 +89,24 @@
 
 
 
-      <nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
+      <nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 md:flex flex-col md:flex-row"
+        aria-label="Menú principal">
         <a href="../" class="hover:text-white">Inicio</a>
         <div class="dropdown relative">
-          <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false"
-            aria-haspopup="true">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
-          <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
-            <a href="web_corporativa.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web
+          <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i></button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50" role="menu" data-bs-popper="static">
+            <a href="web_corporativa.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web
               Corporativa</a>
-            <a href="tienda_online.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Tienda Online</a>
-            <a href="one_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One
+            <a href="tienda_online.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">Tienda Online</a>
+            <a href="one_page.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One
               Page</a>
-            <a href="landing_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Landing Page</a>
+            <a href="landing_page.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">Landing Page</a>
           </div>
         </div>
         <a href="nosotros.html" class="hover:text-white">Nosotros</a>
@@ -151,121 +159,225 @@
   </header>
 
   <!-- Sobre mi -->
-<section class="py-12 bg-white">
-  <div class="container mx-auto px-4">
-    <div class="max-w-3xl mx-auto">
-      <div class="text-center mb-12">
-        <h1 class="text-xl font-bold text-gray-800 mb-4">¿Quién está detrás de DaveTech?</>
-        <p class="text-5xl text-gray-600">Hola, soy David <span class="text-red-400">Valdés</span></p>
-      </div>
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Carousel container -->
+        <div class="relative">
+          <!-- Slides -->
+          <div class="relative overflow-hidden">
+            <!-- Slide 1 -->
+            <div x-show="activeSlide === 0" x-transition:enter="transition transform duration-500"
+              x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+              x-transition:leave="transition transform duration-500" x-transition:leave-start="translate-x-0"
+              x-transition:leave-end="-translate-x-full" class="flex flex-col md:flex-row items-center gap-8">
+              <div class="w-full md:w-2/3">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6 font-orbitron tracking-wide">
+                  David Valdés
+                  <span class="block text-lg font-normal text-blue-600 mt-2">Innovación & Liderazgo Tecnológico</span>
+                </h2>
+                <p class="text-xl text-gray-600 mb-6">Fundador & CEO</p>
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                  <p class="text-gray-700 leading-relaxed">
+                    "Como fundador de DaveTech, combino mi pasión por la tecnología con más de 10 años de experiencia en
+                    soporte técnico. Mi objetivo es crear soluciones digitales innovadoras que no solo transformen
+                    negocios sino que también mejoren la vida digital de nuestros clientes. Especializado en
+                    ciberseguridad y desarrollo web, lidero un equipo comprometido con la excelencia y la innovación
+                    continua."
+                  </p>
+                </div>
+              </div>
+              <div class="w-full md:w-1/3 ">
+                <img src="../img/equipo/dave.jpg" alt="David Valdés - Fundador de DaveTech"
+                  class="rounded-lg shadow-lg w-full pb-6">
+              </div>
+            </div>
 
-      <div class="flex flex-col md:flex-row items-center gap-8 mb-12">
-        <div class="w-full md:w-1/3">
-          <img src="../img/equipo/dave.jpg" alt="David Parra - Fundador de DaveTech" class="rounded-lg shadow-lg w-full">
-        </div>
-        <div class="w-full md:w-2/3">
-          <p class="text-gray-700 mb-6">
-            Como fundador de DaveTech, soy un desarrollador con más de 2 años de experiencia creando soluciones digitales personalizadas. Me especializo en transformar ideas en plataformas tecnológicas atractivas y funcionales que impulsan el crecimiento de negocios y mejoran la experiencia digital de hogares.
-          </p>
-        </div>
-      </div>
+            <!-- Slide 2 -->
+            <div x-show="activeSlide === 1" x-transition:enter="transition transform duration-500"
+              x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+              x-transition:leave="transition transform duration-500" x-transition:leave-start="translate-x-0"
+              x-transition:leave-end="-translate-x-full" class="flex flex-col md:flex-row items-center gap-8">
+              <div class="w-full md:w-2/3">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Soporte Técnico</h2>
+                <p class="text-xl text-gray-600 mb-6">Experiencia & Compromiso</p>
+                <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                  <ul class="space-y-4 pt-4">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      <p class="text-black">Brindamos soporte técnico remoto y presencial para solucionar problemas con
+                        nuestros equipos.</p>
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      <p class="text-black">Gestión integral de redes y servidores empresariales</p>
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      <p class="text-black">Soluciones de seguridad y respaldo de datos</p>
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-3"></i>
+                      <p class="text-black">Soporte 24/7 para emergencias técnicas</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="w-full md:w-1/3">
+                <img src="../img/equipo/davetechlogo1.jpg" alt="Equipo de Soporte Técnico"
+                  class="rounded-lg shadow-lg w-full">
+              </div>
+            </div>
 
-      <div class="grid md:grid-cols-3 gap-8 mb-12">
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Personalización total</h3>
-          <p class="text-gray-600">Cada cliente tiene necesidades únicas. Diseñamos soluciones a medida que reflejan la identidad y objetivos específicos de cada proyecto.</p>
+            <!-- Slide 3 -->
+            <div x-show="activeSlide === 2" x-transition:enter="transition transform duration-500"
+              x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0"
+              x-transition:leave="transition transform duration-500" x-transition:leave-start="translate-x-0"
+              x-transition:leave-end="-translate-x-full" class="flex flex-col md:flex-row items-center gap-8 p-6">
+              <div class="w-full md:w-1/3">
+                <img src="../img/equipo/davetech.jpg" alt="Equipo de Desarrollo" class="rounded-lg shadow-lg w-full">
+              </div>
+              <div class="w-full md:w-2/3">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Desarrollo Web</h2>
+                <p class="text-xl text-gray-600 mb-6">Innovación & Creatividad</p>
+                <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                  <ul class="space-y-4">
+                    <li class="flex items-center"><i class="fas fa-code text-purple-500 mr-3"></i>
+                      <p class="text-black">Plataformas web de alto rendimiento y estabilidad Sitios web corporativos
+                        con diseño responsivo y SEO optimizado</p>
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-shopping-cart text-purple-500 mr-3"></i>
+                      <p class="text-black">Plataformas E-commerce personalizadas con integración de pagos</p>
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-mobile-alt text-purple-500 mr-3"></i>
+                      <p class="text-black">Aplicaciones web progresivas (PWA) multiplataforma</p>
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-chart-line text-purple-500 mr-3"></i>
+                      <p class="text-black">Análisis de datos y optimización de rendimiento</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- slide 4  img lado derecho-->
+            <div class="flex flex-col md:flex-row items-center gap-8 p-6">
+              <div class="w-full md:w-1/3">
+                <img src="../img/equipo/davestore.jpg" alt="Equipo de Desarrollo" class="rounded-lg shadow-lg w-full">
+              </div>
+              <div class="w-full md:w-2/3">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Pagina web Store</h2>
+                <p class="text-xl text-gray-600 mb-6">Sistema de venta en línea</p>
+                <div class="bg-purple-50 p-6 rounded-lg shadow-md">
+                  <ul class="space-y-4">
+                    <li class="flex items-center"><i class="fas fa-shopping-cart text-purple-500 mr-3"></i>
+                      <p class="text-black">Sistema de ventas por pedidos
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-shopping-cart text-purple-500 mr-3"></i>
+                      <p class="text-black">Productos en stock</p>
+                    </li>
+                    <li class="flex items-center"><i class="fas fa-shopping-cart text-purple-500 mr-3"></i>
+                      <p class="text-black">Planes Diseño Web</p>
+                    </li>
+                    <!-- boton link -->
+                    <div class="mt-6">
+                      <a href="https://shop-murex-eight.vercel.app/" target="_blank"
+                        class="bg-purple-500 text-white px-6 py-3 rounded-md shadow-md hover:bg-purple-600 transition-colors">
+                        Visitar Página
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Comunicación constante</h3>
-          <p class="text-gray-600">Mantenemos un diálogo abierto durante todo el proceso, disponibles vía llamadas, videollamadas o WhatsApp para asegurar resultados óptimos.</p>
-        </div>
-        <div class="bg-gray-50 p-6 rounded-lg">
-          <h3 class="text-xl font-semibold text-gray-800 mb-4">Adaptabilidad</h3>
-          <p class="text-gray-600">Ofrecemos soluciones escalables que se ajustan a diferentes presupuestos y cronogramas, sin comprometer la calidad.</p>
-        </div>
-      </div>
 
-      <div class="text-center">
-        <h3 class="text-2xl font-bold text-gray-800 mb-6">¿A quién ayudamos?</h3>
-        <p class="text-gray-700 mb-8">
-          Trabajamos principalmente con pequeñas y medianas empresas, así como con hogares que buscan optimizar su experiencia tecnológica. Nuestro objetivo es proporcionar soluciones tecnológicas accesibles y efectivas que impulsen el éxito de nuestros clientes.
-        </p>
-        <a href="../pages/contacto.html" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-          Contáctanos
-        </a>
+
+
+        <!-- Carousel Indicators -->
+        <div class="absolute bottom-4 left-0 right-0">
+          <div class="flex items-center justify-center gap-2">
+            <button @click="activeSlide = 0"
+              :class="{'bg-blue-500': activeSlide === 0, 'bg-gray-300': activeSlide !== 0}"
+              class="w-3 h-3 rounded-full transition-colors"></button>
+            <button @click="activeSlide = 1"
+              :class="{'bg-blue-500': activeSlide === 1, 'bg-gray-300': activeSlide !== 1}"
+              class="w-3 h-3 rounded-full transition-colors"></button>
+            <button @click="activeSlide = 2"
+              :class="{'bg-blue-500': activeSlide === 2, 'bg-gray-300': activeSlide !== 2}"
+              class="w-3 h-3 rounded-full transition-colors"></button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-  <!-- Informacion de nosotros -->
-
+    </div>
+  </section>
 
   <!-- Reconocimiento de la empresa clientes-->
-<section class="bg-gray-100 py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Lo que dicen nuestros clientes</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Testimonial 1 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <div class="flex items-center mb-4">
-          <img src="../img/testimonials/MariaGonzalezDueñadePasteleríaDulce.jpg" alt="Cliente 1" class="w-12 h-12 rounded-full mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">María González</h4>
-            <p class="text-gray-600 text-sm">Dueña de Pastelería Dulce</p>
-          </div>
-        </div>
-        <p class="text-gray-700">"DaveTech transformó completamente nuestra presencia digital. Ahora tenemos una web profesional que refleja perfectamente nuestra marca y ha aumentado significativamente nuestras ventas online."</p>
-        <div class="mt-4 text-yellow-400">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-      </div>
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Lo que dicen nuestros clientes</h2>
 
-      <!-- Testimonial 2 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <div class="flex items-center mb-4">
-          <img src="../img/testimonials/CarlosRuiz.jpg" alt="Cliente 2" class="w-12 h-12 rounded-full mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">Carlos Ruiz</h4>
-            <p class="text-gray-600 text-sm">Gerente de TechSolutions</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="../img/testimonials/MariaGonzalezDueñadePasteleríaDulce.jpg" alt="Cliente 1"
+              class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold text-gray-800">María González</h4>
+              <p class="text-gray-600 text-sm">Dueña de Pastelería Dulce</p>
+            </div>
+          </div>
+          <p class="text-gray-700">"DaveTech transformó completamente nuestra presencia digital. Ahora tenemos una web
+            profesional que refleja perfectamente nuestra marca y ha aumentado significativamente nuestras ventas
+            online."</p>
+          <div class="mt-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
         </div>
-        <p class="text-gray-700">"El servicio de soporte técnico es excepcional. Siempre están disponibles cuando los necesitamos y resuelven nuestros problemas de manera rápida y eficiente."</p>
-        <div class="mt-4 text-yellow-400">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
-        </div>
-      </div>
 
-      <!-- Testimonial 3 -->
-      <div class="bg-white p-6 rounded-lg shadow-lg">
-        <div class="flex items-center mb-4">
-          <img src="../img/testimonials/AnaMartinez.jpg" alt="Cliente 3" class="w-12 h-12 rounded-full mr-4">
-          <div>
-            <h4 class="font-semibold text-gray-800">Ana Martínez</h4>
-            <p class="text-gray-600 text-sm">Propietaria de Boutique AM</p>
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="../img/testimonials/CarlosRuiz.jpg" alt="Cliente 2" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold text-gray-800">Carlos Ruiz</h4>
+              <p class="text-gray-600 text-sm">Gerente de TechSolutions</p>
+            </div>
+          </div>
+          <p class="text-gray-700">"El servicio de soporte técnico es excepcional. Siempre están disponibles cuando los
+            necesitamos y resuelven nuestros problemas de manera rápida y eficiente."</p>
+          <div class="mt-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
           </div>
         </div>
-        <p class="text-gray-700">"La atención personalizada y el compromiso con nuestro proyecto fueron excepcionales. DaveTech entendió perfectamente nuestras necesidades y entregó más de lo que esperábamos."</p>
-        <div class="mt-4 text-yellow-400">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="../img/testimonials/AnaMartinez.jpg" alt="Cliente 3" class="w-12 h-12 rounded-full mr-4">
+            <div>
+              <h4 class="font-semibold text-gray-800">Ana Martínez</h4>
+              <p class="text-gray-600 text-sm">Propietaria de Boutique AM</p>
+            </div>
+          </div>
+          <p class="text-gray-700">"La atención personalizada y el compromiso con nuestro proyecto fueron excepcionales.
+            DaveTech entendió perfectamente nuestras necesidades y entregó más de lo que esperábamos."</p>
+          <div class="mt-4 text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <footer class="bg-gray-900 py-8 border-t border-gray-800">

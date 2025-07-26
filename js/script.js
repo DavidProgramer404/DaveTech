@@ -342,15 +342,32 @@ document.addEventListener("DOMContentLoaded", function () {
       showAlert('Descarga', "Descargando cotización como PDF...");
     });
 
-  // Send via WhatsApp (mock functionality)
+  // Send via WhatsApp with detailed quote information
   document
     .getElementById("send-whatsapp")
     .addEventListener("click", function () {
+      const quoteNumber = document.getElementById("quote-number").textContent;
+      const totalPrice = document.getElementById("final-quote-total").textContent;
+      const serviceName = quoteData.service?.name || "Servicio no especificado";
+      
+      let optionsText = "";
+      if (quoteData.options.length > 0) {
+        optionsText = quoteData.options.map(opt => 
+          `${opt.name}: ${opt.priceText}`
+        ).join("\n");
+      } else {
+        optionsText = "Sin opciones adicionales";
+      }
+      
       const whatsappMsg = encodeURIComponent(
-        `Hola, quiero confirmar mi cotización #${
-          document.getElementById("quote-number").textContent
-        } por ${document.getElementById("final-quote-total").textContent}`
+        `Hola, estoy interesado en el siguiente servicio:\n\n` +
+        `*Cotización #${quoteNumber}*\n` +
+        `*Servicio:* ${serviceName}\n` +
+        `*Opciones seleccionadas:*\n${optionsText}\n\n` +
+        `*Total:* ${totalPrice}\n\n` +
+        `Por favor confírmenme disponibilidad y forma de pago.`
       );
+      
       window.open(`https://wa.me/56999442312?text=${whatsappMsg}`, "_blank");
     });
 

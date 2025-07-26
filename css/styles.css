@@ -166,3 +166,74 @@ img {
   opacity: 1;
   visibility: visible;
 }
+
+/* Clases de utilidad */
+.hidden {
+  display: none !important;
+}
+
+/* Estilos del carrusel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  animation: fadeEffect 1s;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.carousel-nav button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-nav button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicator.active {
+  background: rgba(255, 255, 255, 1);
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}

@@ -1,113 +1,374 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Web Corporativa | DaveTech.cl</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <meta name="theme-color" content="#1a202c">
+  <meta name="description"
+    content="Soporte técnico profesional, soluciones tecnológicas, mantención, instalación de software y asistencia remota en Chile. DaveTech.cl, tu aliado tecnológico.">
+  <meta name="keywords"
+    content="soporte técnico, tecnología, mantención, instalación software, asistencia remota, DaveTech, Chile, informática, servicios TI">
+  <meta name="author" content="DaveTech.cl">
+  <link rel="canonical" href="https://davetech.cl/">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://davetech.cl/">
+  <meta property="og:title" content="DaveTech.cl - Soporte Técnico Profesional">
+  <meta property="og:description"
+    content="Soluciones tecnológicas profesionales para empresas y hogares en Chile. Soporte técnico, mantención y servicios TI.">
+  <meta property="og:image" content="https://davetech.cl/img/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://davetech.cl/">
+  <meta name="twitter:title" content="DaveTech.cl - Soporte Técnico Profesional">
+  <meta name="twitter:description"
+    content="Soluciones tecnológicas profesionales para empresas y hogares en Chile. Soporte técnico, mantención y servicios TI.">
+  <meta name="twitter:image" content="https://davetech.cl/img/og-image.png">
+
+  <!-- Core Web Vitals & Performance Optimization -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+  <!-- Accessibility Enhancements -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Scripts -->
+  <script src="../js/error-tracking.js" defer></script>
+  <script src="../js/performance-metrics.js" defer></script>
+  <script src="../js/accessibility.js" defer></script>
+  <script src="../js/main.js" defer></script>
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="../css/styles.css" as="style">
+  <link rel="preload" href="../js/main.js" as="script">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <title>DaveTech.cl - Web Corporativa</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/script.js"></script>
-  <script src="../js/menu.js"></script>
-  <script src="../js/ham.js"></script>
+
+  <script src="./js/script.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./users/users.js"></script>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
 </head>
-<body class="bg-gray-900 text-white">
+
+<body class="bg-azul-oscuro-profundo text-blanco-profesional">
+
+
+  <!-- Custom Alert Modal -->
+  <div id="custom-alert-modal"
+    class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div class="bg-gray-800 p-6 rounded-lg shadow-xl max-w-sm w-full border border-blue-500">
+      <div class="flex justify-between items-center mb-4">
+        <h3 id="custom-alert-title" class="text-xl font-bold text-white"></h3>
+        <button id="custom-alert-close" class="text-gray-400 hover:text-gray-200 text-2xl">&times;</button>
+      </div>
+      <p id="custom-alert-message" class="text-gray-300 mb-6"></p>
+      <button id="custom-alert-ok"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full">OK</button>
+    </div>
+  </div>
+
   <header class="bg-tech tech-border py-4">
     <div class="container mx-auto px-4 flex justify-between items-center">
-        <div>
-            <a href="../" class="block">
-                <h1 class="text-3xl font-bold logo-font text-white">
-                    <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span>
-                    <span class="text-xs align-top">.cl</span>
-                </h1>
-                <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
-            </a>
-        </div>
+      <a href="./" class="block">
+        <h1 class="text-3xl font-bold logo-font text-white">
+          <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span>
+          <span class="text-xs align-top">.cl</span>
+        </h1>
+        <p class="text-gray-300 text-sm">Soluciones tecnológicas para tu empresa y hogar</p>
+      </a>
 
-        <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+      <button id="mobile-menu-button" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40">
+        <div class="flex justify-end p-4">
+          <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
-        </button>
-
-        <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40 hidden">
-            <div class="flex justify-end p-4">
-                <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
-            <nav class="flex flex-col items-center space-y-6 text-xl text-gray-300 pt-10">
-                <a href="../" class="hover:text-white">Inicio</a>
-                <div class="relative">
-                    <button id="mobile-services-dropdown-btn" class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center">
-                        Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
-                    </button>
-                    <div id="mobile-services-dropdown" class="mobile-dropdown-menu hidden mt-2 space-y-2 drop-shadow-2xl">
-                        <a href="web_corporativa.html" class="block text-gray-300 hover:text-white pl-4">Web Corporativa</a>
-                        <a href="tienda_online.html" class="block text-gray-300 hover:text-white pl-4">Tienda Online</a>
-                        <a href="one_page.html" class="block text-gray-300 hover:text-white pl-4">One Page</a>
-                        <a href="landing_page.html" class="block text-gray-300 hover:text-white pl-4">Landing Page</a>
-                    </div>
-                </div>
-                <a href="nosotros.html" class="hover:text-white">Nosotros</a>
-                <a href="/admin/login.html" class="hover:text-white">Admin</a>
-                <a href="contacto.html" class="hover:text-white">Contacto</a>
-                <a href="../users/login.html" class="hover:text-white login-button">Login</a>
-                <span class="user-info hidden text-white"></span>
-                <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
-            </nav>
+          </button>
         </div>
-
-        <nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 hidden md:flex flex-col md:flex-row" aria-label="Menú principal">
-            <a href="../" class="hover:text-white">Inicio</a>
-            <div class="dropdown relative">
-                <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" aria-expanded="false" aria-haspopup="true">
-                    Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
-                </button>
-                <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50 hidden" role="menu">
-                    <a href="web_corporativa.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web Corporativa</a>
-                    <a href="tienda_online.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Tienda Online</a>
-                    <a href="one_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One Page</a>
-                    <a href="landing_page.html" class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Landing Page</a>
-                </div>
+        <nav class="flex flex-col items-center space-y-6 text-xl text-gray-300 pt-10">
+          <a href="/" class="hover:text-white">Inicio</a>
+          <div class="relative">
+            <button id="mobile-services-dropdown-btn"
+              class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center" type="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+            </button>
+            <div id="mobile-services-dropdown" class="mobile-dropdown-menu mt-2 space-y-2 drop-shadow-2xl"
+              data-bs-popper="static">
+              <a href="../pages/web_corporativa.html" class="block text-gray-300 hover:text-white pl-4">Web Corporativa</a>
+              <a href="../pages/tienda_online.html" class="block text-gray-300 hover:text-white pl-4">Tienda Online</a>
+              <a href="../pages/one_page.html" class="block text-gray-300 hover:text-white pl-4">One Page</a>
+              <a href="../pages/landing_page.html" class="block text-gray-300 hover:text-white pl-4">Landing Page</a>
             </div>
-            <a href="nosotros.html" class="hover:text-white">Nosotros</a>
-            <a href="/admin/login.html" class="hover:text-white">Admin</a>
-            <a href="contacto.html" class="hover:text-white">Contacto</a>
-            <a href="../users/login.html" class="hover:text-white login-button">Login</a>
-            <span class="user-info hidden text-white"></span>
-            <button class="logout-button hidden hover:text-white">Cerrar Sesión</button>
+          </div>
+          <a href="../pages/nosotros.html" class="hover:text-white">Nosotros</a>
+          <a href="../pages/contacto.html" class="hover:text-white">Contacto</a>
+
+          <!-- Menú de Usuario Móvil -->
+          <div class="relative w-full text-center">
+            <button id="mobile-user-dropdown-btn"
+              class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center justify-center w-full"
+              type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span class="user-info hidden text-white">Bienvenido</span>
+              <span class="login-button flex items-center justify-center">
+                <i class="fas fa-user mr-1"></i> Mi Cuenta
+              </span>
+              <i class="fas fa-chevron-down ml-1 text-xs"></i>
+            </button>
+            <div id="mobile-user-dropdown" class="mobile-dropdown-menu mt-2 space-y-2 w-full bg-gray-800 rounded-lg p-2"
+              data-bs-popper="static">
+              <a href="/admin/login.html" class="block text-gray-300 hover:text-white py-2">
+                <i class="fas fa-shield-alt mr-2"></i>Admin
+              </a>
+              <a href="users/login.html" class="login-button block text-gray-300 hover:text-white py-2">
+                <i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión
+              </a>
+              <button class="logout-button hidden w-full text-center text-gray-300 hover:text-white py-2">
+                <i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión
+              </button>
+            </div>
+          </div>
         </nav>
+      </div>
+
+
+
+
+      <nav id="navbar-main" class="navbar-nav space-x-6 text-gray-300 md:flex flex-col md:flex-row"
+        aria-label="Menú principal">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <div class="dropdown relative">
+          <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Servicios</button>
+          <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50" role="menu"
+            data-bs-popper="static">
+            <a href="../pages/web_corporativa.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">Web
+              Corporativa</a>
+            <a href="../pages/tienda_online.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">Tienda Online</a>
+            <a href="../pages/one_page.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">One
+              Page</a>
+            <a href="../pages/landing_page.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">Landing Page</a>
+          </div>
+        </div>
+        <a href="../pages/nosotros.html" class="hover:text-white">Nosotros</a>
+        <a href="/admin/login.html" class="hover:text-white">Admin</a>
+        <a href="/pages/contacto.html" class="hover:text-white">Contacto</a>
+
+        <!-- Menú de Usuario -->
+        <div class="dropdown relative ml-auto">
+          <button class="dropdown-toggle hover:text-white focus:outline-none flex items-center gap-2" type="button"
+            data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+            <span class="user-info hidden text-white">¡Hola!</span>
+            <span class="login-button flex items-center"><i class="fas fa-user mr-1"></i> Mi Cuenta</span>
+          </button>
+          <div class="dropdown-menu absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-50" role="menu"
+            data-bs-popper="static">
+            <a href="/admin/login.html"
+              class="dropdown-item block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white" role="menuitem">
+              <i class="fas fa-shield-alt mr-2"></i>Admin
+            </a>
+            <a href="/users/login.html"
+              class="dropdown-item login-button block px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">
+              <i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión
+            </a>
+            <button
+              class="dropdown-item logout-button hidden w-full text-left px-4 py-2 text-gray-300 hover:bg-blue-600 hover:text-white"
+              role="menuitem">
+              <i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión
+            </button>
+          </div>
+        </div>
+      </nav>
+
     </div>
-</header>
     </div>
-    <main class="container mx-auto px-4 py-12">
-    <section class="bg-gradient-to-r from-blue-900 to-blue-800 rounded-xl p-8 shadow-lg tech-border mb-10">
-      <h2 class="text-3xl md:text-4xl font-bold logo-font mb-4 text-white">Web <span class="text-cyan-400">Corporativa</span></h2>
-      <p class="text-gray-300 text-lg mb-6">Impulsa la presencia digital de tu empresa con una web profesional, moderna y adaptada a tu marca. Incluye:
-      </p>
-      <ul class="list-disc pl-6 text-gray-300 mb-6">
-        <li>Diseño personalizado y responsivo</li>
-        <li>Hasta 6 secciones (Inicio, Nosotros, Servicios, Portafolio, Blog, Contacto)</li>
-        <li>Formulario de contacto integrado</li>
-        <li>Optimización SEO básica</li>
-        <li>Integración con redes sociales</li>
-        <li>Soporte técnico y capacitación</li>
+
+    <!-- Web Corporativa información -->
+<div class="container mx-auto px-4 py-12">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold text-white mb-4">Servicios de Desarrollo Web Corporativo</h2>
+    <p class="text-xl text-gray-300">Soluciones web profesionales para impulsar su presencia digital</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Basic Package -->
+    <div class="bg-gray-800 rounded-lg p-6 border border-blue-500 hover:border-blue-400 transition-all">
+      <div class="text-center mb-6">
+        <i class="fas fa-laptop-code text-4xl text-blue-500 mb-4"></i>
+        <h3 class="text-2xl font-bold text-white">Web Básica</h3>
+        <p class="text-gray-400 mt-2">Ideal para pequeñas empresas</p>
+      </div>
+      <ul class="space-y-3 text-gray-300 mb-6">
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Diseño Responsive</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Hasta 5 páginas</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Formulario de contacto</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>SEO básico</li>
       </ul>
-      <a href="https://wa.me/56999442312?text=Quiero%20una%20Web%20Corporativa" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium shadow-md inline-block">Solicitar Cotización</a>
-    </section>
-  </main>
+      <div class="text-center">
+                    <button class="btn btn-success" id="send-whatsapp">Solicitar Información por WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- Professional Package -->
+    <div class="bg-gray-800 rounded-lg p-6 border border-blue-500 hover:border-blue-400 transition-all transform hover:-translate-y-1">
+      <div class="text-center mb-6">
+        <i class="fas fa-building text-4xl text-blue-500 mb-4"></i>
+        <h3 class="text-2xl font-bold text-white">Web Profesional</h3>
+        <p class="text-gray-400 mt-2">Para empresas en crecimiento</p>
+      </div>
+      <ul class="space-y-3 text-gray-300 mb-6">
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Diseño Personalizado</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Hasta 10 páginas</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Blog integrado</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>SEO avanzado</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Panel de administración</li>
+      </ul>
+      <div class="text-center">
+        <button class="btn btn-success" id="send-whatsapp">Solicitar Información por WhatsApp</button>
+      </div>
+    </div>
+
+    <!-- Enterprise Package -->
+    <div class="bg-gray-800 rounded-lg p-6 border border-blue-500 hover:border-blue-400 transition-all">
+      <div class="text-center mb-6">
+        <i class="fas fa-chart-line text-4xl text-blue-500 mb-4"></i>
+        <h3 class="text-2xl font-bold text-white">Web Empresarial</h3>
+        <p class="text-gray-400 mt-2">Solución completa empresarial</p>
+      </div>
+      <ul class="space-y-3 text-gray-300 mb-6">
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Diseño Premium</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Páginas ilimitadas</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Integración ERP/CRM</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Analytics avanzado</li>
+        <li><i class="fas fa-check text-green-500 mr-2"></i>Soporte 24/7</li>
+      </ul>
+      <div class="text-center">
+        <button class="btn btn-success" id="send-whatsapp">Solicitar Información por WhatsApp</button>
+      </div>
+    </div>
+  </div>
+</div>
   </header>
-  
-  <footer class="bg-gray-800 py-6 mt-10">
-    <div class="container mx-auto px-4 text-center text-gray-400">
-      &copy; 2024 DaveTech.cl - Todos los derechos reservados
+
+
+
+  <footer class="bg-gray-900 py-8 border-t border-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold logo-font text-white mb-4">
+            <span class="text-blue-500">Dave</span><span class="text-cyan-400">Tech</span><span
+              class="text-xs align-top">.cl</span>
+          </h3>
+          <p class="text-gray-400 mb-4">Soluciones tecnológicas para empresas y hogares en todo Chile.</p>
+          <div class="flex space-x-4">
+            <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="javascript:void(0)" class="text-gray-400 hover:text-blue-500 transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Servicios</h4>
+          <ul class="space-y-2">
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte
+                Remoto</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Soporte
+                Presencial</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Mantención y
+                Actualización</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Instalación de
+                Software</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Enlaces Rápidos</h4>
+          <ul class="space-y-2">
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Inicio</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Sobre
+                Nosotros</a></li>
+            <li><a href="javascript:void(0)" class="text-gray-400 hover:text-blue-400 transition-colors">Contacto</a>
+            </li>
+            <!-- link DaveStore -->
+            <li><a href="https://shop-murex-eight.vercel.app/"
+                class="text-gray-400 hover:text-blue-400 transition-colors">DaveStore 🏪🏬🛍️🛒</a></li>
+            <li><a href="https://www.davetech.cl/"
+                class="text-gray-400 hover:text-blue-400 transition-colors">www.davetech.cl</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-4">Contacto</h4>
+          <ul class="space-y-2">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-blue-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">Santiago, Chile</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone text-blue-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">+569 99442312</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-envelope text-blue-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">contacto@davetech.cl</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-clock text-blue-500 mt-1 mr-3"></i>
+              <span class="text-gray-400">Lun-Vie: 9:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 DaveTech.cl - Todos los derechos reservados</p>
+      </div>
     </div>
   </footer>
 
-  <script src="../js/script.js"></script>
+  <!-- WhatsApp Button -->
+  <a href="javascript:void(0)" id="whatsapp-btn" class="whatsapp-button">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+  <script src="./js/script.js"></script>
+  <!-- CDN BOOSTRAP -->
+  <script src="URL_ADDRESS.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
