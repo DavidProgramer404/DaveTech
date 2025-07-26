@@ -4,6 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Check if the user has already seen the welcome screen in this session
+    if (!sessionStorage.getItem('hasSeenWelcome')) {
+      // If not, redirect to the welcome screen
+      window.location.replace('wellcome.html');
+    }
+  </script>
   <meta name="theme-color" content="#1a202c">
   <meta name="description" content="Soporte técnico profesional, soluciones tecnológicas, mantención, instalación de software y asistencia remota en Chile. DaveTech.cl, tu aliado tecnológico.">
   <meta name="keywords" content="soporte técnico, tecnología, mantención, instalación software, asistencia remota, DaveTech, Chile, informática, servicios TI">
@@ -94,7 +101,7 @@
 
 <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40">
   <div class="flex justify-end p-4">
-    <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
+    <button id="mobile-menu-close" class="text-gray-300 hover:text-white" aria-label="Close menu">
       <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>

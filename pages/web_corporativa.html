@@ -55,9 +55,9 @@
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap">
   <link rel="stylesheet" href="../css/style.css">
 
-  <script src="./js/script.js"></script>
-  <script src="./js/menu.js"></script>
-  <script src="./users/users.js"></script>
+  <script src="../js/script.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../users/users.js"></script>
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Bootstrap JS -->
@@ -100,58 +100,52 @@
       </button>
 
       <div id="mobile-menu" class="md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-40">
-        <div class="flex justify-end p-4">
-          <button id="mobile-menu-close" class="text-gray-300 hover:text-white">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <nav class="flex flex-col items-center space-y-6 text-xl text-gray-300 pt-10">
-          <a href="/" class="hover:text-white">Inicio</a>
-          <div class="relative">
-            <button id="mobile-services-dropdown-btn"
-              class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center" type="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
-            </button>
-            <div id="mobile-services-dropdown" class="mobile-dropdown-menu mt-2 space-y-2 drop-shadow-2xl"
-              data-bs-popper="static">
-              <a href="../pages/web_corporativa.html" class="block text-gray-300 hover:text-white pl-4">Web Corporativa</a>
-              <a href="../pages/tienda_online.html" class="block text-gray-300 hover:text-white pl-4">Tienda Online</a>
-              <a href="../pages/one_page.html" class="block text-gray-300 hover:text-white pl-4">One Page</a>
-              <a href="../pages/landing_page.html" class="block text-gray-300 hover:text-white pl-4">Landing Page</a>
-            </div>
-          </div>
-          <a href="../pages/nosotros.html" class="hover:text-white">Nosotros</a>
-          <a href="../pages/contacto.html" class="hover:text-white">Contacto</a>
-
-          <!-- Menú de Usuario Móvil -->
-          <div class="relative w-full text-center">
-            <button id="mobile-user-dropdown-btn"
-              class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center justify-center w-full"
-              type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="user-info hidden text-white">Bienvenido</span>
-              <span class="login-button flex items-center justify-center">
-                <i class="fas fa-user mr-1"></i> Mi Cuenta
-              </span>
-              <i class="fas fa-chevron-down ml-1 text-xs"></i>
-            </button>
-            <div id="mobile-user-dropdown" class="mobile-dropdown-menu mt-2 space-y-2 w-full bg-gray-800 rounded-lg p-2"
-              data-bs-popper="static">
-              <a href="/admin/login.html" class="block text-gray-300 hover:text-white py-2">
-                <i class="fas fa-shield-alt mr-2"></i>Admin
-              </a>
-              <a href="users/login.html" class="login-button block text-gray-300 hover:text-white py-2">
-                <i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión
-              </a>
-              <button class="logout-button hidden w-full text-center text-gray-300 hover:text-white py-2">
-                <i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión
-              </button>
-            </div>
-          </div>
-        </nav>
+  <div class="flex justify-end p-4">
+    <button id="mobile-menu-close" class="text-gray-300 hover:text-white" aria-label="Close menu">
+      <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <nav class="flex flex-col items-center space-y-6 text-xl text-gray-300 pt-10">
+    <a href="/" class="hover:text-white">Inicio</a>
+    <div class="relative">
+      <button id="mobile-services-dropdown-btn" class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Servicios <i class="fas fa-chevron-down ml-1 text-xs"></i>
+      </button>
+      <div id="mobile-services-dropdown" class="mobile-dropdown-menu mt-2 space-y-2 drop-shadow-2xl" data-bs-popper="static">
+        <a href="../pages/web_corporativa.html" class="block text-gray-300 hover:text-white pl-4">Web Corporativa</a>
+        <a href="../pages/tienda_online.html" class="block text-gray-300 hover:text-white pl-4">Tienda Online</a>
+        <a href="../pages/one_page.html" class="block text-gray-300 hover:text-white pl-4">One Page</a>
+        <a href="../pages/landing_page.html" class="block text-gray-300 hover:text-white pl-4">Landing Page</a>
       </div>
+    </div>
+    <a href="../pages/nosotros.html" class="hover:text-white">Nosotros</a>
+    <a href="../pages/contacto.html" class="hover:text-white">Contacto</a>
+    
+    <!-- Menú de Usuario Móvil -->
+    <div class="relative w-full text-center">
+      <button id="mobile-user-dropdown-btn" class="mobile-dropdown-toggle hover:text-white focus:outline-none flex items-center justify-center w-full" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="user-info hidden text-white">Bienvenido</span>
+        <span class="login-button flex items-center justify-center">
+          <i class="fas fa-user mr-1"></i> Mi Cuenta
+        </span>
+        <i class="fas fa-chevron-down ml-1 text-xs"></i>
+      </button>
+      <div id="mobile-user-dropdown" class="mobile-dropdown-menu mt-2 space-y-2 w-full bg-gray-800 rounded-lg p-2" data-bs-popper="static">
+        <a href="/admin/login.html" class="block text-gray-300 hover:text-white py-2">
+          <i class="fas fa-shield-alt mr-2"></i>Admin
+        </a>
+        <a href="users/login.html" class="login-button block text-gray-300 hover:text-white py-2">
+          <i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión
+        </a>
+        <button class="logout-button hidden w-full text-center text-gray-300 hover:text-white py-2">
+          <i class="fas fa-sign-out-alt mr-2"></i>Cerrar Sesión
+        </button>
+      </div>
+    </div>
+  </nav>
+</div>
 
 
 

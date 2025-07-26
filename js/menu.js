@@ -14,6 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("Mobile menu button clicked. Mobile menu hidden: " + mobileMenu.classList.contains("hidden"));
     });
 
+    // Add event listener for close button (X)
+    const mobileMenuCloseBtn = document.querySelector("#mobile-menu [aria-label='Close menu']");
+    if (mobileMenuCloseBtn) {
+      mobileMenuCloseBtn.addEventListener("click", function() {
+        mobileMenu.classList.add("hidden");
+      });
+    }
+
     // Close mobile menu when clicking outside
     document.addEventListener("click", function (e) {
       if (!mobileMenu.contains(e.target) && !mobileMenuButton.contains(e.target) && !mobileMenu.classList.contains("hidden")) {
