@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Add event listener for close button (X)
-    const mobileMenuCloseBtn = document.querySelector("#mobile-menu [aria-label='Close menu']");
+    const mobileMenuCloseBtn = document.getElementById("mobile-menu-close");
     if (mobileMenuCloseBtn) {
       mobileMenuCloseBtn.addEventListener("click", function() {
         mobileMenu.classList.add("hidden");
